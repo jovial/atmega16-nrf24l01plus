@@ -1,0 +1,12 @@
+nRF24L01 radio firmware by Neil MacMillan
+copyright: Neil Macmillan
+
+Changed a few registers to support atmega16.
+
+Original available at:
+Neil's firmware: http://nrqm.ca/nrf24l01/firmware/OA
+http://code.google.com/p/nrf24l01/
+
+changes by Doug and Will Szumski
+
+

@@ -1,0 +1,2548 @@
+GAS LISTING /tmp/cc00pSBt.s 			page 1
+
+
+   1               		.file	"radio.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.global __do_copy_data
+   8               		.global __do_clear_bss
+   9               		.stabs	"/home/Stewart/atmel/atmega16_nrf_port/",100,0,2,.Ltext0
+  10               		.stabs	"radio/radio.c",100,0,2,.Ltext0
+  11               		.text
+  12               	.Ltext0:
+  13               		.stabs	"gcc2_compiled.",60,0,0,0
+  14               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  15               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  16               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  17               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  18               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  19               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  20               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  21               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  22               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  23               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  24               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  25               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"void:t(0,15)=(0,15)",128,0,0,0
+  29               		.stabs	"radio/radio.h",130,0,0,0
+  30               		.stabs	"/usr/lib/gcc/avr/4.5.1/include/stddef.h",130,0,0,0
+  31               		.stabs	"ptrdiff_t:t(2,1)=(0,1)",128,0,149,0
+  32               		.stabs	"size_t:t(2,2)=(0,4)",128,0,211,0
+  33               		.stabs	"wchar_t:t(2,3)=(0,1)",128,0,323,0
+  34               		.stabn	162,0,0,0
+  35               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/avr/io.h",130,0,0,0
+  36               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/avr/sfr_defs.h",130,0,0,0
+  37               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/inttypes.h",130,0,0,0
+  38               		.stabs	"/usr/lib/gcc/avr/4.5.1/include/stdint.h",130,0,0,0
+  39               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/stdint.h",130,0,0,0
+  40               		.stabs	"int8_t:t(7,1)=(0,10)",128,0,121,0
+  41               		.stabs	"uint8_t:t(7,2)=(0,11)",128,0,122,0
+  42               		.stabs	"int16_t:t(7,3)=(0,1)",128,0,123,0
+  43               		.stabs	"uint16_t:t(7,4)=(0,4)",128,0,124,0
+  44               		.stabs	"int32_t:t(7,5)=(0,3)",128,0,125,0
+  45               		.stabs	"uint32_t:t(7,6)=(0,5)",128,0,126,0
+  46               		.stabs	"int64_t:t(7,7)=(0,6)",128,0,128,0
+  47               		.stabs	"uint64_t:t(7,8)=(0,7)",128,0,129,0
+  48               		.stabs	"intptr_t:t(7,9)=(7,3)",128,0,142,0
+  49               		.stabs	"uintptr_t:t(7,10)=(7,4)",128,0,147,0
+  50               		.stabs	"int_least8_t:t(7,11)=(7,1)",128,0,159,0
+  51               		.stabs	"uint_least8_t:t(7,12)=(7,2)",128,0,164,0
+  52               		.stabs	"int_least16_t:t(7,13)=(7,3)",128,0,169,0
+  53               		.stabs	"uint_least16_t:t(7,14)=(7,4)",128,0,174,0
+  54               		.stabs	"int_least32_t:t(7,15)=(7,5)",128,0,179,0
+  55               		.stabs	"uint_least32_t:t(7,16)=(7,6)",128,0,184,0
+  56               		.stabs	"int_least64_t:t(7,17)=(7,7)",128,0,192,0
+  57               		.stabs	"uint_least64_t:t(7,18)=(7,8)",128,0,199,0
+GAS LISTING /tmp/cc00pSBt.s 			page 2
+
+
+  58               		.stabs	"int_fast8_t:t(7,19)=(7,1)",128,0,213,0
+  59               		.stabs	"uint_fast8_t:t(7,20)=(7,2)",128,0,218,0
+  60               		.stabs	"int_fast16_t:t(7,21)=(7,3)",128,0,223,0
+  61               		.stabs	"uint_fast16_t:t(7,22)=(7,4)",128,0,228,0
+  62               		.stabs	"int_fast32_t:t(7,23)=(7,5)",128,0,233,0
+  63               		.stabs	"uint_fast32_t:t(7,24)=(7,6)",128,0,238,0
+  64               		.stabs	"int_fast64_t:t(7,25)=(7,7)",128,0,246,0
+  65               		.stabs	"uint_fast64_t:t(7,26)=(7,8)",128,0,253,0
+  66               		.stabs	"intmax_t:t(7,27)=(7,7)",128,0,273,0
+  67               		.stabs	"uintmax_t:t(7,28)=(7,8)",128,0,278,0
+  68               		.stabn	162,0,0,0
+  69               		.stabn	162,0,0,0
+  70               		.stabs	"int_farptr_t:t(5,1)=(7,5)",128,0,77,0
+  71               		.stabs	"uint_farptr_t:t(5,2)=(7,6)",128,0,81,0
+  72               		.stabn	162,0,0,0
+  73               		.stabn	162,0,0,0
+  74               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/avr/fuse.h",130,0,0,0
+  75               		.stabs	"__fuse_t:t(8,1)=(8,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,247,0
+  76               		.stabn	162,0,0,0
+  77               		.stabn	162,0,0,0
+  78               		.stabs	"radio/nRF24L01.h",130,0,0,0
+  79               		.stabs	"radio_register_t:t(9,1)=(7,2)",128,0,25,0
+  80               		.stabn	162,0,0,0
+  81               		.stabs	"radio/packet.h",130,0,0,0
+  82               		.stabs	"PACKET_TYPE:t(10,1)=(7,2)",128,0,18,0
+  83               		.stabs	"_msg:T(10,2)=s29messageid:(7,2),0,8;address:(10,3)=ar(10,4)=r(10,4);0;0177777;;0;4;(7,2),8
+  84               		.stabs	"pf_message_t:t(10,6)=(10,2)",128,0,34,0
+  85               		.stabs	"_ack:T(10,7)=s1messageid:(7,2),0,8;;",128,0,0,0
+  86               		.stabs	"pf_ack_t:t(10,8)=(10,7)",128,0,39,0
+  87               		.stabs	"_pf:T(10,9)=u29_filler:(10,10)=ar(10,4);0;28;(7,2),0,232;message:(10,6),0,232;ack:(10,8),0
+  88               		.stabs	"payloadformat_t:t(10,11)=(10,9)",128,0,51,0
+  89               		.stabs	"_rp:T(10,12)=s32timestamp:(7,4),0,16;type:(10,1),16,8;payload:(10,11),24,232;;",128,0,0,0
+  90               		.stabs	"radiopacket_t:t(10,13)=(10,12)",128,0,60,0
+  91               		.stabn	162,0,0,0
+  92               		.stabs	"radio/spi.h",130,0,0,0
+  93               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/stdio.h",130,0,0,0
+  94               		.stabs	"/usr/lib/gcc/avr/4.5.1/include/stdarg.h",130,0,0,0
+  95               		.stabs	"__gnuc_va_list:t(13,1)=(13,2)=*(0,15)",128,0,40,0
+  96               		.stabs	"va_list:t(13,3)=(13,1)",128,0,102,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"__file:T(12,1)=s14buf:(12,2)=*(0,2),0,16;unget:(0,11),16,8;flags:(7,2),24,8;size:(0,1),32,
+  99               		.stabn	162,0,0,0
+ 100               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/stdlib.h",130,0,0,0
+ 101               		.stabs	"div_t:t(14,1)=(14,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+ 102               		.stabs	"ldiv_t:t(14,3)=(14,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+ 103               		.stabs	"__compar_fn_t:t(14,5)=(14,6)=*(14,7)=f(0,1)",128,0,80,0
+ 104               		.stabn	162,0,0,0
+ 105               		.stabn	162,0,0,0
+ 106               		.stabs	"_radio_pipe:T(1,1)=@s8;eRADIO_PIPE_0:0,RADIO_PIPE_1:1,RADIO_PIPE_2:2,RADIO_PIPE_3:3,RADIO_
+ 107               		.stabs	"RADIO_PIPE:t(1,2)=(1,1)",128,0,39,0
+ 108               		.stabs	"_radio_tx_power:T(1,3)=@s8;eRADIO_LOWEST_POWER:0,RADIO_LOW_POWER:1,RADIO_HIGH_POWER:2,RADI
+ 109               		.stabs	"RADIO_TX_POWER:t(1,4)=(1,3)",128,0,46,0
+ 110               		.stabs	"_radio_dr:T(1,5)=@s8;eRADIO_1MBPS:0,RADIO_2MBPS:1,;",128,0,0,0
+ 111               		.stabs	"RADIO_DATA_RATE:t(1,6)=(1,5)",128,0,51,0
+ 112               		.stabs	"_radio_receive:T(1,7)=@s8;eRADIO_RX_INVALID_ARGS:0,RADIO_RX_TRANSMITTING:1,RADIO_RX_FIFO_E
+ 113               		.stabs	"RADIO_RX_STATUS:t(1,8)=(1,7)",128,0,59,0
+ 114               		.stabs	"_radio_transmit:T(1,9)=@s8;eRADIO_TX_MAX_RT:0,RADIO_TX_SUCCESS:1,;",128,0,0,0
+GAS LISTING /tmp/cc00pSBt.s 			page 3
+
+
+ 115               		.stabs	"RADIO_TX_STATUS:t(1,10)=(1,9)",128,0,64,0
+ 116               		.stabs	"_radio_tx_wait:T(1,11)=@s8;eRADIO_WAIT_FOR_TX:0,RADIO_RETURN_ON_TX:1,;",128,0,0,0
+ 117               		.stabs	"RADIO_TX_WAIT:t(1,12)=(1,11)",128,0,69,0
+ 118               		.stabs	"_radio_ack:T(1,13)=@s8;eRADIO_ACK:0,RADIO_NO_ACK:1,;",128,0,0,0
+ 119               		.stabs	"RADIO_USE_ACK:t(1,14)=(1,13)",128,0,74,0
+ 120               		.stabs	"_ed:T(1,15)=@s8;eDISABLE:0,ENABLE:1,;",128,0,0,0
+ 121               		.stabs	"ON_OFF:t(1,16)=(1,15)",128,0,79,0
+ 122               		.stabn	162,0,0,0
+ 123               		.stabs	"send_instruction:f(0,15)",36,0,119,send_instruction
+ 124               		.stabs	"instruction:P(7,2)",64,0,119,24
+ 125               		.stabs	"data:P(0,16)=*(7,2)",64,0,119,14
+ 126               		.stabs	"buffer:P(0,16)",64,0,119,16
+ 127               		.stabs	"len:P(7,2)",64,0,119,18
+ 128               		.type	send_instruction, @function
+ 129               	send_instruction:
+ 130               		.stabd	46,0,0
+   0:radio/radio.c **** /*
+   1:radio/radio.c ****  * radio.c
+   2:radio/radio.c ****  *
+   3:radio/radio.c ****  *  Created on: 24-Jan-2009
+   4:radio/radio.c ****  *      Author: Neil MacMillan
+   5:radio/radio.c ****  */
+   6:radio/radio.c **** #include "radio.h"
+   7:radio/radio.c **** 
+   8:radio/radio.c **** 
+   9:radio/radio.c **** // non-public constants and macros
+  10:radio/radio.c **** 
+  11:radio/radio.c **** #define CHANNEL 112
+  12:radio/radio.c **** #define ADDRESS_LENGTH 5
+  13:radio/radio.c **** 
+  14:radio/radio.c **** // Pin definitions for chip select and chip enable on the radio module
+  15:radio/radio.c **** #define CE_DDR		DDRD
+  16:radio/radio.c **** #define CSN_DDR		DDRD
+  17:radio/radio.c **** #define CE_PORT		PORTD
+  18:radio/radio.c **** #define CSN_PORT	PORTD
+  19:radio/radio.c **** #define CE_PIN		PD4
+  20:radio/radio.c **** #define CSN_PIN		PD5
+  21:radio/radio.c **** 
+  22:radio/radio.c **** // Definitions for selecting and enabling the radio
+  23:radio/radio.c **** #define CSN_HIGH()	CSN_PORT |=  _BV(CSN_PIN);
+  24:radio/radio.c **** #define CSN_LOW()	CSN_PORT &= ~_BV(CSN_PIN);
+  25:radio/radio.c **** #define CE_HIGH()	CE_PORT |=  _BV(CE_PIN);
+  26:radio/radio.c **** #define CE_LOW()	CE_PORT &= ~_BV(CE_PIN);
+  27:radio/radio.c **** 
+  28:radio/radio.c **** // Flag which denotes that the radio is currently transmitting
+  29:radio/radio.c **** static volatile uint8_t transmit_lock;
+  30:radio/radio.c **** // tracks the payload widths of the Rx pipes
+  31:radio/radio.c **** static volatile uint8_t rx_pipe_widths[6] = {32, 32, 0, 0, 0, 0};
+  32:radio/radio.c **** // holds the transmit address (Rx pipe 0 is set to this address when transmitting with auto-ack ena
+  33:radio/radio.c **** static volatile uint8_t tx_address[5] = { 0xe7, 0xe7, 0xe7, 0xe7, 0xe7 };
+  34:radio/radio.c **** // holds the receiver address for Rx pipe 0 (the address is overwritten when transmitting with auto
+  35:radio/radio.c **** static volatile uint8_t rx_pipe0_address[5] = { 0xe7, 0xe7, 0xe7, 0xe7, 0xe7 };
+  36:radio/radio.c **** // the driver keeps track of the success status for the last 16 transmissions
+  37:radio/radio.c **** static volatile uint16_t tx_history = 0xFF;
+  38:radio/radio.c **** 
+  39:radio/radio.c **** static volatile RADIO_TX_STATUS tx_last_status = RADIO_TX_SUCCESS;
+  40:radio/radio.c **** 
+GAS LISTING /tmp/cc00pSBt.s 			page 4
+
+
+  41:radio/radio.c **** extern void radio_rxhandler(uint8_t pipenumber);
+  42:radio/radio.c **** 
+  43:radio/radio.c **** /* for usart*/
+  44:radio/radio.c **** #include "../usart/ad_usart.h" 
+  45:radio/radio.c **** char text[128];	
+  46:radio/radio.c **** //end
+  47:radio/radio.c **** 
+  48:radio/radio.c **** 
+  49:radio/radio.c **** /**
+  50:radio/radio.c ****  * Retrieve the status register.
+  51:radio/radio.c ****  */
+  52:radio/radio.c **** // was static
+  53:radio/radio.c ****  uint8_t get_status()
+  54:radio/radio.c **** {
+  55:radio/radio.c **** 	uint8_t status = 0;
+  56:radio/radio.c **** 	CSN_LOW();
+  57:radio/radio.c **** 
+  58:radio/radio.c **** 	status = SPI_Write_Byte(NOP);
+  59:radio/radio.c **** 
+  60:radio/radio.c **** 	CSN_HIGH();
+  61:radio/radio.c **** 
+  62:radio/radio.c **** 	return status;
+  63:radio/radio.c **** }
+  64:radio/radio.c **** /**
+  65:radio/radio.c ****  * Set a register in the radio
+  66:radio/radio.c ****  * \param reg The register value defined in nRF24L01.h (e.g. CONFIG, EN_AA, &c.).
+  67:radio/radio.c ****  * \param value The value to write to the given register (the whole register is overwritten).
+  68:radio/radio.c ****  * \return The status register.
+  69:radio/radio.c ****  */
+  70:radio/radio.c **** static uint8_t set_register(radio_register_t reg, uint8_t* value, uint8_t len)
+  71:radio/radio.c **** {
+  72:radio/radio.c **** 	uint8_t status;
+  73:radio/radio.c **** 	CSN_LOW();
+  74:radio/radio.c **** 
+  75:radio/radio.c **** 	status = SPI_Write_Byte(W_REGISTER | (REGISTER_MASK & reg));
+  76:radio/radio.c **** 	SPI_Write_Block(value, len);
+  77:radio/radio.c **** 	
+  78:radio/radio.c **** 	CSN_HIGH();
+  79:radio/radio.c **** 	
+  80:radio/radio.c **** 	snprintf(text, sizeof(text), "Status set_register: %x \n\r",status);
+  81:radio/radio.c **** 	put_str(text,0);
+  82:radio/radio.c **** 	return status;
+  83:radio/radio.c **** }
+  84:radio/radio.c **** 
+  85:radio/radio.c **** /**
+  86:radio/radio.c ****  * Retrieve a register value from the radio.
+  87:radio/radio.c ****  * \param reg The register value defined in nRF24L01.h (e.g. CONFIG, EN_AA, &c.).
+  88:radio/radio.c ****  * \param buffer A contiguous memory block into which the register contents will be copied.  If the
+  89:radio/radio.c ****  * 		register contents, then the remaining bytes will be overwritten with 0xFF.
+  90:radio/radio.c ****  * \param len The length of the buffer.
+  91:radio/radio.c ****  */
+  92:radio/radio.c **** static uint8_t get_register(radio_register_t reg, uint8_t* buffer, uint8_t len)
+  93:radio/radio.c **** {
+  94:radio/radio.c **** 	uint8_t status, i;
+  95:radio/radio.c **** 	for (i = 0; i < len; i++)
+  96:radio/radio.c **** 	{
+  97:radio/radio.c **** 		// If the buffer is too long for the register results, then the radio will interpret the extra by
+GAS LISTING /tmp/cc00pSBt.s 			page 5
+
+
+  98:radio/radio.c **** 		// To remove the risk, we set the buffer elements to NOP instructions.
+  99:radio/radio.c **** 		buffer[i] = 0xFF;
+ 100:radio/radio.c **** 	}
+ 101:radio/radio.c **** 	CSN_LOW();
+ 102:radio/radio.c **** 
+ 103:radio/radio.c **** 	status = SPI_Write_Byte(R_REGISTER | (REGISTER_MASK & reg));
+ 104:radio/radio.c **** 	SPI_ReadWrite_Block(NULL, buffer, len);
+ 105:radio/radio.c **** 
+ 106:radio/radio.c **** 	CSN_HIGH();
+ 107:radio/radio.c **** 
+ 108:radio/radio.c **** 	return status;
+ 109:radio/radio.c **** }
+ 110:radio/radio.c **** 
+ 111:radio/radio.c **** /**
+ 112:radio/radio.c ****  * Send an instruction to the nRF24L01.
+ 113:radio/radio.c ****  * \param instruction The instruction to send (see the bottom of nRF24L01.h)
+ 114:radio/radio.c ****  * \param data An array of argument data to the instruction.  If len is 0, then this may be NULL.
+ 115:radio/radio.c ****  * \param buffer An array for the instruction's return data.  This can be NULL if the instruction h
+ 116:radio/radio.c ****  * \param len The length of the data and buffer arrays.
+ 117:radio/radio.c ****  */
+ 118:radio/radio.c **** static void send_instruction(uint8_t instruction, uint8_t* data, uint8_t* buffer, uint8_t len)
+ 119:radio/radio.c **** {
+ 131               		.stabn	68,0,120,.LM0-.LFBB1
+ 132               	.LM0:
+ 133               	.LFBB1:
+ 134 0000 EF92      		push r14
+ 135 0002 FF92      		push r15
+ 136 0004 0F93      		push r16
+ 137 0006 1F93      		push r17
+ 138 0008 DF93      		push r29
+ 139 000a CF93      		push r28
+ 140 000c 0F92      		push __tmp_reg__
+ 141 000e CDB7      		in r28,__SP_L__
+ 142 0010 DEB7      		in r29,__SP_H__
+ 143               	/* prologue: function */
+ 144               	/* frame size = 1 */
+ 145               	/* stack size = 7 */
+ 146               	.L__stack_usage = 7
+ 147 0012 7B01      		movw r14,r22
+ 148 0014 8A01      		movw r16,r20
+ 120:radio/radio.c ****     CSN_LOW();
+ 149               		.stabn	68,0,121,.LM1-.LFBB1
+ 150               	.LM1:
+ 151 0016 9598      		cbi 50-0x20,5
+ 121:radio/radio.c **** 	// send the instruction
+ 122:radio/radio.c **** 	SPI_Write_Byte(instruction);
+ 152               		.stabn	68,0,123,.LM2-.LFBB1
+ 153               	.LM2:
+ 154 0018 2983      		std Y+1,r18
+ 155 001a 0E94 0000 		call SPI_Write_Byte
+ 123:radio/radio.c **** 	// pass in args
+ 124:radio/radio.c **** 	if (len > 0)
+ 156               		.stabn	68,0,125,.LM3-.LFBB1
+ 157               	.LM3:
+ 158 001e 2981      		ldd r18,Y+1
+ 159 0020 2223      		tst r18
+ 160 0022 01F0      		breq .L2
+GAS LISTING /tmp/cc00pSBt.s 			page 6
+
+
+ 125:radio/radio.c **** 	{
+ 126:radio/radio.c **** 		if (buffer == NULL)	//
+ 161               		.stabn	68,0,127,.LM4-.LFBB1
+ 162               	.LM4:
+ 163 0024 0115      		cp r16,__zero_reg__
+ 164 0026 1105      		cpc r17,__zero_reg__
+ 165 0028 01F4      		brne .L3
+ 127:radio/radio.c **** 			SPI_Write_Block(data, len);
+ 166               		.stabn	68,0,128,.LM5-.LFBB1
+ 167               	.LM5:
+ 168 002a C701      		movw r24,r14
+ 169 002c 622F      		mov r22,r18
+ 170 002e 0E94 0000 		call SPI_Write_Block
+ 171 0032 00C0      		rjmp .L2
+ 172               	.L3:
+ 128:radio/radio.c **** 		else
+ 129:radio/radio.c **** 			SPI_ReadWrite_Block(data, buffer, len);
+ 173               		.stabn	68,0,130,.LM6-.LFBB1
+ 174               	.LM6:
+ 175 0034 C701      		movw r24,r14
+ 176 0036 B801      		movw r22,r16
+ 177 0038 422F      		mov r20,r18
+ 178 003a 0E94 0000 		call SPI_ReadWrite_Block
+ 179               	.L2:
+ 130:radio/radio.c **** 	}
+ 131:radio/radio.c ****     // resynch SPI
+ 132:radio/radio.c ****     CSN_HIGH();
+ 180               		.stabn	68,0,133,.LM7-.LFBB1
+ 181               	.LM7:
+ 182 003e 959A      		sbi 50-0x20,5
+ 183               	/* epilogue start */
+ 133:radio/radio.c **** }
+ 184               		.stabn	68,0,134,.LM8-.LFBB1
+ 185               	.LM8:
+ 186 0040 0F90      		pop __tmp_reg__
+ 187 0042 CF91      		pop r28
+ 188 0044 DF91      		pop r29
+ 189 0046 1F91      		pop r17
+ 190 0048 0F91      		pop r16
+ 191 004a FF90      		pop r15
+ 192 004c EF90      		pop r14
+ 193 004e 0895      		ret
+ 194               		.size	send_instruction, .-send_instruction
+ 195               	.Lscope1:
+ 196               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 197               		.stabd	78,0,0
+ 198               		.data
+ 199               	.LC0:
+ 200 0000 5374 6174 		.string	"Status set_register: %x \n\r"
+ 200      7573 2073 
+ 200      6574 5F72 
+ 200      6567 6973 
+ 200      7465 723A 
+ 201               		.text
+ 202               		.stabs	"set_register:f(7,2)",36,0,71,set_register
+ 203               		.stabs	"reg:P(9,1)",64,0,71,24
+ 204               		.stabs	"value:P(0,16)",64,0,71,14
+GAS LISTING /tmp/cc00pSBt.s 			page 7
+
+
+ 205               		.stabs	"len:P(7,2)",64,0,71,20
+ 206               		.type	set_register, @function
+ 207               	set_register:
+ 208               		.stabd	46,0,0
+  72:radio/radio.c **** {
+ 209               		.stabn	68,0,72,.LM9-.LFBB2
+ 210               	.LM9:
+ 211               	.LFBB2:
+ 212 0050 EF92      		push r14
+ 213 0052 FF92      		push r15
+ 214 0054 1F93      		push r17
+ 215 0056 DF93      		push r29
+ 216 0058 CF93      		push r28
+ 217 005a 0F92      		push __tmp_reg__
+ 218 005c CDB7      		in r28,__SP_L__
+ 219 005e DEB7      		in r29,__SP_H__
+ 220               	/* prologue: function */
+ 221               	/* frame size = 1 */
+ 222               	/* stack size = 6 */
+ 223               	.L__stack_usage = 6
+ 224 0060 7B01      		movw r14,r22
+  74:radio/radio.c **** 	CSN_LOW();
+ 225               		.stabn	68,0,74,.LM10-.LFBB2
+ 226               	.LM10:
+ 227 0062 9598      		cbi 50-0x20,5
+  76:radio/radio.c **** 	status = SPI_Write_Byte(W_REGISTER | (REGISTER_MASK & reg));
+ 228               		.stabn	68,0,76,.LM11-.LFBB2
+ 229               	.LM11:
+ 230 0064 8F71      		andi r24,lo8(31)
+ 231 0066 8062      		ori r24,lo8(32)
+ 232 0068 4983      		std Y+1,r20
+ 233 006a 0E94 0000 		call SPI_Write_Byte
+ 234 006e 182F      		mov r17,r24
+  77:radio/radio.c **** 	SPI_Write_Block(value, len);
+ 235               		.stabn	68,0,77,.LM12-.LFBB2
+ 236               	.LM12:
+ 237 0070 C701      		movw r24,r14
+ 238 0072 4981      		ldd r20,Y+1
+ 239 0074 642F      		mov r22,r20
+ 240 0076 0E94 0000 		call SPI_Write_Block
+  79:radio/radio.c **** 	CSN_HIGH();
+ 241               		.stabn	68,0,79,.LM13-.LFBB2
+ 242               	.LM13:
+ 243 007a 959A      		sbi 50-0x20,5
+  81:radio/radio.c **** 	snprintf(text, sizeof(text), "Status set_register: %x \n\r",status);
+ 244               		.stabn	68,0,81,.LM14-.LFBB2
+ 245               	.LM14:
+ 246 007c 8DB7      		in r24,__SP_L__
+ 247 007e 9EB7      		in r25,__SP_H__
+ 248 0080 0897      		sbiw r24,8
+ 249 0082 0FB6      		in __tmp_reg__,__SREG__
+ 250 0084 F894      		cli
+ 251 0086 9EBF      		out __SP_H__,r25
+ 252 0088 0FBE      		out __SREG__,__tmp_reg__
+ 253 008a 8DBF      		out __SP_L__,r24
+ 254 008c EDB7      		in r30,__SP_L__
+ 255 008e FEB7      		in r31,__SP_H__
+GAS LISTING /tmp/cc00pSBt.s 			page 8
+
+
+ 256 0090 3196      		adiw r30,1
+ 257 0092 80E0      		ldi r24,lo8(text)
+ 258 0094 E82E      		mov r14,r24
+ 259 0096 80E0      		ldi r24,hi8(text)
+ 260 0098 F82E      		mov r15,r24
+ 261 009a ADB7      		in r26,__SP_L__
+ 262 009c BEB7      		in r27,__SP_H__
+ 263 009e 1296      		adiw r26,1+1
+ 264 00a0 FC92      		st X,r15
+ 265 00a2 EE92      		st -X,r14
+ 266 00a4 1197      		sbiw r26,1
+ 267 00a6 20E8      		ldi r18,lo8(128)
+ 268 00a8 30E0      		ldi r19,hi8(128)
+ 269 00aa 3383      		std Z+3,r19
+ 270 00ac 2283      		std Z+2,r18
+ 271 00ae 20E0      		ldi r18,lo8(.LC0)
+ 272 00b0 30E0      		ldi r19,hi8(.LC0)
+ 273 00b2 3583      		std Z+5,r19
+ 274 00b4 2483      		std Z+4,r18
+ 275 00b6 1683      		std Z+6,r17
+ 276 00b8 1782      		std Z+7,__zero_reg__
+ 277 00ba 0E94 0000 		call snprintf
+  82:radio/radio.c **** 	put_str(text,0);
+ 278               		.stabn	68,0,82,.LM15-.LFBB2
+ 279               	.LM15:
+ 280 00be EDB7      		in r30,__SP_L__
+ 281 00c0 FEB7      		in r31,__SP_H__
+ 282 00c2 3896      		adiw r30,8
+ 283 00c4 0FB6      		in __tmp_reg__,__SREG__
+ 284 00c6 F894      		cli
+ 285 00c8 FEBF      		out __SP_H__,r31
+ 286 00ca 0FBE      		out __SREG__,__tmp_reg__
+ 287 00cc EDBF      		out __SP_L__,r30
+ 288 00ce C701      		movw r24,r14
+ 289 00d0 60E0      		ldi r22,lo8(0)
+ 290 00d2 0E94 0000 		call put_str
+  84:radio/radio.c **** }
+ 291               		.stabn	68,0,84,.LM16-.LFBB2
+ 292               	.LM16:
+ 293 00d6 812F      		mov r24,r17
+ 294               	/* epilogue start */
+ 295 00d8 0F90      		pop __tmp_reg__
+ 296 00da CF91      		pop r28
+ 297 00dc DF91      		pop r29
+ 298 00de 1F91      		pop r17
+ 299 00e0 FF90      		pop r15
+ 300 00e2 EF90      		pop r14
+ 301 00e4 0895      		ret
+ 302               		.size	set_register, .-set_register
+ 303               		.stabs	"status:r(7,2)",64,0,73,17
+ 304               		.stabn	192,0,0,.LFBB2-.LFBB2
+ 305               		.stabn	224,0,0,.Lscope2-.LFBB2
+ 306               	.Lscope2:
+ 307               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 308               		.stabd	78,0,0
+ 309               		.stabs	"reset_pipe0_address:f(0,15)",36,0,177,reset_pipe0_address
+ 310               		.type	reset_pipe0_address, @function
+GAS LISTING /tmp/cc00pSBt.s 			page 9
+
+
+ 311               	reset_pipe0_address:
+ 312               		.stabd	46,0,0
+ 134:radio/radio.c **** 
+ 135:radio/radio.c **** /**
+ 136:radio/radio.c ****  * Switch the radio to receive mode.  If the radio is already in receive mode, this does nothing.
+ 137:radio/radio.c ****  */
+ 138:radio/radio.c **** static void set_rx_mode()
+ 139:radio/radio.c **** {
+ 140:radio/radio.c **** 	uint8_t config;
+ 141:radio/radio.c **** 	get_register(CONFIG, &config, 1);
+ 142:radio/radio.c **** 	if ((config & _BV(PRIM_RX)) == 0)
+ 143:radio/radio.c **** 	{
+ 144:radio/radio.c **** 		config |= _BV(PRIM_RX);
+ 145:radio/radio.c **** 		set_register(CONFIG, &config, 1);
+ 146:radio/radio.c **** 		// the radio takes 130 us to power up the receiver.
+ 147:radio/radio.c **** 		_delay_us(65);
+ 148:radio/radio.c **** 		_delay_us(65);
+ 149:radio/radio.c **** 	}
+ 150:radio/radio.c **** }
+ 151:radio/radio.c **** 
+ 152:radio/radio.c **** /**
+ 153:radio/radio.c ****  * Switch the radio to transmit mode.  If the radio is already in transmit mode, this does nothing.
+ 154:radio/radio.c ****  */
+ 155:radio/radio.c **** static void set_tx_mode()
+ 156:radio/radio.c **** {
+ 157:radio/radio.c **** 	uint8_t config;
+ 158:radio/radio.c **** 	get_register(CONFIG, &config, 1);
+ 159:radio/radio.c **** 	if ((config & _BV(PRIM_RX)) != 0)
+ 160:radio/radio.c **** 	{
+ 161:radio/radio.c **** 		config &= ~_BV(PRIM_RX);
+ 162:radio/radio.c **** 		set_register(CONFIG, &config, 1);
+ 163:radio/radio.c **** 		// The radio takes 130 us to power up the transmitter
+ 164:radio/radio.c **** 		// You can delete this if you're sending large packets (I'm thinking > 25 bytes, but I'm not sure
+ 165:radio/radio.c **** 		// sending the bytes over SPI can take this long.
+ 166:radio/radio.c **** 		_delay_us(65);
+ 167:radio/radio.c **** 		_delay_us(65);
+ 168:radio/radio.c **** 	}
+ 169:radio/radio.c **** }
+ 170:radio/radio.c **** 
+ 171:radio/radio.c **** /**
+ 172:radio/radio.c ****  * Reset the pipe 0 address if pipe 0 is enabled.  This is necessary when the radio is using Enhanc
+ 173:radio/radio.c ****  * the pipe 0 address is set to the transmit address while the radio is transmitting (this is how t
+ 174:radio/radio.c ****  * auto-ack packets).
+ 175:radio/radio.c ****  */
+ 176:radio/radio.c **** static void reset_pipe0_address()
+ 177:radio/radio.c **** {
+ 313               		.stabn	68,0,178,.LM17-.LFBB3
+ 314               	.LM17:
+ 315               	.LFBB3:
+ 316               	/* prologue: function */
+ 317               	/* frame size = 0 */
+ 318               	/* stack size = 0 */
+ 319               	.L__stack_usage = 0
+ 178:radio/radio.c **** 	if (rx_pipe_widths[RADIO_PIPE_0] != 0)
+ 320               		.stabn	68,0,179,.LM18-.LFBB3
+ 321               	.LM18:
+ 322 00e6 8091 0000 		lds r24,rx_pipe_widths
+GAS LISTING /tmp/cc00pSBt.s 			page 10
+
+
+ 323 00ea 8823      		tst r24
+ 324 00ec 01F0      		breq .L5
+ 179:radio/radio.c **** 	{
+ 180:radio/radio.c **** 		// reset the pipe 0 address if pipe 0 is enabled.
+ 181:radio/radio.c **** 		set_register(RX_ADDR_P0, (uint8_t*)rx_pipe0_address, ADDRESS_LENGTH);
+ 325               		.stabn	68,0,182,.LM19-.LFBB3
+ 326               	.LM19:
+ 327 00ee 8AE0      		ldi r24,lo8(10)
+ 328 00f0 60E0      		ldi r22,lo8(rx_pipe0_address)
+ 329 00f2 70E0      		ldi r23,hi8(rx_pipe0_address)
+ 330 00f4 45E0      		ldi r20,lo8(5)
+ 331 00f6 0E94 0000 		call set_register
+ 332               	.L5:
+ 333 00fa 0895      		ret
+ 334               		.size	reset_pipe0_address, .-reset_pipe0_address
+ 335               	.Lscope3:
+ 336               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 337               		.stabd	78,0,0
+ 338               		.stabs	"get_register.clone.0:f(7,2)",36,0,93,get_register.clone.0
+ 339               		.stabs	"reg:P(9,1)",64,0,93,24
+ 340               		.stabs	"buffer:P(0,16)",64,0,93,28
+ 341               		.type	get_register.clone.0, @function
+ 342               	get_register.clone.0:
+ 343               		.stabd	46,0,0
+  93:radio/radio.c **** static uint8_t get_register(radio_register_t reg, uint8_t* buffer, uint8_t len)
+ 344               		.stabn	68,0,93,.LM20-.LFBB4
+ 345               	.LM20:
+ 346               	.LFBB4:
+ 347 00fc 1F93      		push r17
+ 348 00fe CF93      		push r28
+ 349 0100 DF93      		push r29
+ 350               	/* prologue: function */
+ 351               	/* frame size = 0 */
+ 352               	/* stack size = 3 */
+ 353               	.L__stack_usage = 3
+ 354 0102 EB01      		movw r28,r22
+ 100:radio/radio.c **** 		buffer[i] = 0xFF;
+ 355               		.stabn	68,0,100,.LM21-.LFBB4
+ 356               	.LM21:
+ 357 0104 9FEF      		ldi r25,lo8(-1)
+ 358 0106 9883      		st Y,r25
+ 102:radio/radio.c **** 	CSN_LOW();
+ 359               		.stabn	68,0,102,.LM22-.LFBB4
+ 360               	.LM22:
+ 361 0108 9598      		cbi 50-0x20,5
+ 104:radio/radio.c **** 	status = SPI_Write_Byte(R_REGISTER | (REGISTER_MASK & reg));
+ 362               		.stabn	68,0,104,.LM23-.LFBB4
+ 363               	.LM23:
+ 364 010a 8F71      		andi r24,lo8(31)
+ 365 010c 0E94 0000 		call SPI_Write_Byte
+ 366 0110 182F      		mov r17,r24
+ 105:radio/radio.c **** 	SPI_ReadWrite_Block(NULL, buffer, len);
+ 367               		.stabn	68,0,105,.LM24-.LFBB4
+ 368               	.LM24:
+ 369 0112 80E0      		ldi r24,lo8(0)
+ 370 0114 90E0      		ldi r25,hi8(0)
+ 371 0116 BE01      		movw r22,r28
+GAS LISTING /tmp/cc00pSBt.s 			page 11
+
+
+ 372 0118 41E0      		ldi r20,lo8(1)
+ 373 011a 0E94 0000 		call SPI_ReadWrite_Block
+ 107:radio/radio.c **** 	CSN_HIGH();
+ 374               		.stabn	68,0,107,.LM25-.LFBB4
+ 375               	.LM25:
+ 376 011e 959A      		sbi 50-0x20,5
+ 110:radio/radio.c **** }
+ 377               		.stabn	68,0,110,.LM26-.LFBB4
+ 378               	.LM26:
+ 379 0120 812F      		mov r24,r17
+ 380               	/* epilogue start */
+ 381 0122 DF91      		pop r29
+ 382 0124 CF91      		pop r28
+ 383 0126 1F91      		pop r17
+ 384 0128 0895      		ret
+ 385               		.size	get_register.clone.0, .-get_register.clone.0
+ 386               		.stabs	"status:r(7,2)",64,0,95,17
+ 387               		.stabn	192,0,0,.LFBB4-.LFBB4
+ 388               		.stabn	224,0,0,.Lscope4-.LFBB4
+ 389               	.Lscope4:
+ 390               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 391               		.stabd	78,0,0
+ 392               		.stabs	"set_rx_mode:f(0,15)",36,0,139,set_rx_mode
+ 393               		.type	set_rx_mode, @function
+ 394               	set_rx_mode:
+ 395               		.stabd	46,0,0
+ 140:radio/radio.c **** {
+ 396               		.stabn	68,0,140,.LM27-.LFBB5
+ 397               	.LM27:
+ 398               	.LFBB5:
+ 399 012a 0F93      		push r16
+ 400 012c 1F93      		push r17
+ 401 012e DF93      		push r29
+ 402 0130 CF93      		push r28
+ 403 0132 0F92      		push __tmp_reg__
+ 404 0134 CDB7      		in r28,__SP_L__
+ 405 0136 DEB7      		in r29,__SP_H__
+ 406               	/* prologue: function */
+ 407               	/* frame size = 1 */
+ 408               	/* stack size = 5 */
+ 409               	.L__stack_usage = 5
+ 142:radio/radio.c **** 	get_register(CONFIG, &config, 1);
+ 410               		.stabn	68,0,142,.LM28-.LFBB5
+ 411               	.LM28:
+ 412 0138 80E0      		ldi r24,lo8(0)
+ 413 013a 8E01      		movw r16,r28
+ 414 013c 0F5F      		subi r16,lo8(-(1))
+ 415 013e 1F4F      		sbci r17,hi8(-(1))
+ 416 0140 B801      		movw r22,r16
+ 417 0142 0E94 0000 		call get_register.clone.0
+ 143:radio/radio.c **** 	if ((config & _BV(PRIM_RX)) == 0)
+ 418               		.stabn	68,0,143,.LM29-.LFBB5
+ 419               	.LM29:
+ 420 0146 8981      		ldd r24,Y+1
+ 421 0148 80FD      		sbrc r24,0
+ 422 014a 00C0      		rjmp .L8
+ 145:radio/radio.c **** 		config |= _BV(PRIM_RX);
+GAS LISTING /tmp/cc00pSBt.s 			page 12
+
+
+ 423               		.stabn	68,0,145,.LM30-.LFBB5
+ 424               	.LM30:
+ 425 014c 8160      		ori r24,lo8(1)
+ 426 014e 8983      		std Y+1,r24
+ 146:radio/radio.c **** 		set_register(CONFIG, &config, 1);
+ 427               		.stabn	68,0,146,.LM31-.LFBB5
+ 428               	.LM31:
+ 429 0150 80E0      		ldi r24,lo8(0)
+ 430 0152 B801      		movw r22,r16
+ 431 0154 41E0      		ldi r20,lo8(1)
+ 432 0156 0E94 0000 		call set_register
+ 433               	.LBB80:
+ 434               	.LBB81:
+ 435               	.LBB82:
+ 436               	.LBB83:
+ 437               	.LBB84:
+ 438               	.LBB85:
+ 439               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h",132,0,0,.Ltext1
+ 440               	.Ltext1:
+   0:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** /* Copyright (c) 2002, Marek Michalkiewicz
+   1:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****    Copyright (c) 2007 Joerg Wunsch
+   2:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****    All rights reserved.
+   3:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+   4:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****    Redistribution and use in source and binary forms, with or without
+   5:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****    modification, are permitted provided that the following conditions are met:
+   6:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+   7:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****    * Redistributions of source code must retain the above copyright
+   8:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****      notice, this list of conditions and the following disclaimer.
+   9:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  10:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****    * Redistributions in binary form must reproduce the above copyright
+  11:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****      notice, this list of conditions and the following disclaimer in
+  12:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****      the documentation and/or other materials provided with the
+  13:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****      distribution.
+  14:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  15:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****    * Neither the name of the copyright holders nor the names of
+  16:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****      contributors may be used to endorse or promote products derived
+  17:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****      from this software without specific prior written permission.
+  18:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  19:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  20:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  21:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  22:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  23:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  24:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  25:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  26:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  27:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  28:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  29:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   POSSIBILITY OF SUCH DAMAGE. */
+  30:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  31:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** /* $Id: delay_basic.h,v 1.1 2007/05/13 21:23:20 joerg_wunsch Exp $ */
+  32:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  33:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** #ifndef _UTIL_DELAY_BASIC_H_
+  34:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** #define _UTIL_DELAY_BASIC_H_ 1
+  35:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  36:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** #include <inttypes.h>
+  37:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+GAS LISTING /tmp/cc00pSBt.s 			page 13
+
+
+  38:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** /** \file */
+  39:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** /** \defgroup util_delay_basic <util/delay_basic.h>: Basic busy-wait delay loops
+  40:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     \code
+  41:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     #include <util/delay_basic.h>
+  42:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     \endcode
+  43:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  44:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     The functions in this header file implement simple delay loops
+  45:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     that perform a busy-waiting.  They are typically used to
+  46:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     facilitate short delays in the program execution.  They are
+  47:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     implemented as count-down loops with a well-known CPU cycle
+  48:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     count per loop iteration.  As such, no other processing can
+  49:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     occur simultaneously.  It should be kept in mind that the
+  50:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     functions described here do not disable interrupts.
+  51:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  52:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     In general, for long delays, the use of hardware timers is
+  53:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     much preferrable, as they free the CPU, and allow for
+  54:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     concurrent processing of other events while the timer is
+  55:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     running.  However, in particular for very short delays, the
+  56:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     overhead of setting up a hardware timer is too much compared
+  57:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     to the overall delay time.
+  58:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  59:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     Two inline functions are provided for the actual delay algorithms.
+  60:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  61:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** */
+  62:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  63:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** #if !defined(__DOXYGEN__)
+  64:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** static inline void _delay_loop_1(uint8_t __count) __attribute__((always_inline));
+  65:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** static inline void _delay_loop_2(uint16_t __count) __attribute__((always_inline));
+  66:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** #endif
+  67:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  68:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** /** \ingroup util_delay_basic
+  69:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  70:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     Delay loop using an 8-bit counter \c __count, so up to 256
+  71:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     iterations are possible.  (The value 256 would have to be passed
+  72:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     as 0.)  The loop executes three CPU cycles per iteration, not
+  73:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     including the overhead the compiler needs to setup the counter
+  74:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     register.
+  75:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  76:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     Thus, at a CPU speed of 1 MHz, delays of up to 768 microseconds
+  77:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     can be achieved.
+  78:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** */
+  79:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** void
+  80:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** _delay_loop_1(uint8_t __count)
+  81:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** {
+  82:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 	__asm__ volatile (
+  83:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 		"1: dec %0" "\n\t"
+  84:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 		"brne 1b"
+  85:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 		: "=r" (__count)
+  86:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 		: "0" (__count)
+  87:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 	);
+  88:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** }
+  89:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  90:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** /** \ingroup util_delay_basic
+  91:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  92:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     Delay loop using a 16-bit counter \c __count, so up to 65536
+  93:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     iterations are possible.  (The value 65536 would have to be
+  94:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     passed as 0.)  The loop executes four CPU cycles per iteration,
+GAS LISTING /tmp/cc00pSBt.s 			page 14
+
+
+  95:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     not including the overhead the compiler requires to setup the
+  96:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     counter register pair.
+  97:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  98:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     Thus, at a CPU speed of 1 MHz, delays of up to about 262.1
+  99:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     milliseconds can be achieved.
+ 100:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****  */
+ 101:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** void
+ 102:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** _delay_loop_2(uint16_t __count)
+ 103:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** {
+ 104:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 	__asm__ volatile (
+ 441               		.stabn	68,0,105,.LM32-.LFBB5
+ 442               	.LM32:
+ 443 015a 83EC      		ldi r24,lo8(195)
+ 444 015c 90E0      		ldi r25,hi8(195)
+ 445 015e FC01      		movw r30,r24
+ 446               	/* #APP */
+ 447               	 ;  105 "/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h" 1
+ 448 0160 3197      		1: sbiw r30,1
+ 449 0162 01F4      		brne 1b
+ 450               	 ;  0 "" 2
+ 451               	/* #NOAPP */
+ 452               	.LBE85:
+ 453               	.LBE84:
+ 454               	.LBE83:
+ 455               	.LBE82:
+ 456               	.LBE81:
+ 457               	.LBE80:
+ 458               	.LBB86:
+ 459               	.LBB87:
+ 460               	.LBB88:
+ 461               	.LBB89:
+ 462               	.LBB90:
+ 463               	.LBB91:
+ 464               	/* #APP */
+ 465               	 ;  105 "/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h" 1
+ 466 0164 0197      		1: sbiw r24,1
+ 467 0166 01F4      		brne 1b
+ 468               	 ;  0 "" 2
+ 469               	/* #NOAPP */
+ 470               	.L8:
+ 471               	/* epilogue start */
+ 472               	.LBE91:
+ 473               	.LBE90:
+ 474               	.LBE89:
+ 475               	.LBE88:
+ 476               	.LBE87:
+ 477               	.LBE86:
+ 478               		.stabs	"radio/radio.c",132,0,0,.Ltext2
+ 479               	.Ltext2:
+ 151:radio/radio.c **** }
+ 480               		.stabn	68,0,151,.LM33-.LFBB5
+ 481               	.LM33:
+ 482 0168 0F90      		pop __tmp_reg__
+ 483 016a CF91      		pop r28
+ 484 016c DF91      		pop r29
+ 485 016e 1F91      		pop r17
+ 486 0170 0F91      		pop r16
+GAS LISTING /tmp/cc00pSBt.s 			page 15
+
+
+ 487 0172 0895      		ret
+ 488               		.size	set_rx_mode, .-set_rx_mode
+ 489               		.stabs	"config:(7,2)",128,0,141,1
+ 490               		.stabn	192,0,0,.LFBB5-.LFBB5
+ 491               		.stabn	224,0,0,.Lscope5-.LFBB5
+ 492               	.Lscope5:
+ 493               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 494               		.stabd	78,0,0
+ 495               		.stabs	"get_status:F(7,2)",36,0,54,get_status
+ 496               	.global	get_status
+ 497               		.type	get_status, @function
+ 498               	get_status:
+ 499               		.stabd	46,0,0
+  55:radio/radio.c **** {
+ 500               		.stabn	68,0,55,.LM34-.LFBB6
+ 501               	.LM34:
+ 502               	.LFBB6:
+ 503               	/* prologue: function */
+ 504               	/* frame size = 0 */
+ 505               	/* stack size = 0 */
+ 506               	.L__stack_usage = 0
+  57:radio/radio.c **** 	CSN_LOW();
+ 507               		.stabn	68,0,57,.LM35-.LFBB6
+ 508               	.LM35:
+ 509 0174 9598      		cbi 50-0x20,5
+  59:radio/radio.c **** 	status = SPI_Write_Byte(NOP);
+ 510               		.stabn	68,0,59,.LM36-.LFBB6
+ 511               	.LM36:
+ 512 0176 8FEF      		ldi r24,lo8(-1)
+ 513 0178 0E94 0000 		call SPI_Write_Byte
+  61:radio/radio.c **** 	CSN_HIGH();
+ 514               		.stabn	68,0,61,.LM37-.LFBB6
+ 515               	.LM37:
+ 516 017c 959A      		sbi 50-0x20,5
+ 517               	/* epilogue start */
+  64:radio/radio.c **** }
+ 518               		.stabn	68,0,64,.LM38-.LFBB6
+ 519               	.LM38:
+ 520 017e 0895      		ret
+ 521               		.size	get_status, .-get_status
+ 522               	.Lscope6:
+ 523               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 524               		.stabd	78,0,0
+ 525               		.data
+ 526               	.LC1:
+ 527 001b 4E4F 503A 		.string	"NOP: %x \n\r"
+ 527      2025 7820 
+ 527      0A0D 00
+ 528               		.text
+ 529               		.stabs	"Radio_Init:F(0,15)",36,0,232,Radio_Init
+ 530               	.global	Radio_Init
+ 531               		.type	Radio_Init, @function
+ 532               	Radio_Init:
+ 533               		.stabd	46,0,0
+ 182:radio/radio.c **** 	}
+ 183:radio/radio.c **** }
+ 184:radio/radio.c **** 
+GAS LISTING /tmp/cc00pSBt.s 			page 16
+
+
+ 185:radio/radio.c **** /**
+ 186:radio/radio.c ****  * Configure radio defaults and turn on the radio in receive mode.
+ 187:radio/radio.c ****  * This configures the radio to its max-power, max-packet-header-length settings.  If you want to r
+ 188:radio/radio.c ****  * or increase on-air payload bandwidth, you'll have to change the config.
+ 189:radio/radio.c ****  */
+ 190:radio/radio.c **** static void configure_registers()
+ 191:radio/radio.c **** {
+ 192:radio/radio.c **** 	uint8_t value;
+ 193:radio/radio.c **** 	uint8_t status;
+ 194:radio/radio.c **** 	SPI_Init();
+ 195:radio/radio.c **** 	
+ 196:radio/radio.c **** 	uint8_t status2 = get_status();
+ 197:radio/radio.c **** 	snprintf(text, sizeof(text), "NOP: %x \n\r",status2);
+ 198:radio/radio.c **** 	put_str(text,0);
+ 199:radio/radio.c **** 
+ 200:radio/radio.c **** 	// set address width to 5 bytes.
+ 201:radio/radio.c **** 	value = ADDRESS_LENGTH - 2;			// 0b11 for 5 bytes, 0b10 for 4 bytes, 0b01 for 3 bytes
+ 202:radio/radio.c **** 	set_register(SETUP_AW, &value, 1);
+ 203:radio/radio.c **** 
+ 204:radio/radio.c **** 	// set Enhanced Shockburst retry to every 586 us, up to 5 times.  If packet collisions are a probl
+ 205:radio/radio.c **** 	// then consider changing the retry delay to be different on the different stations so that they d
+ 206:radio/radio.c **** 	value = 0x15;
+ 207:radio/radio.c **** 	//value = 0x10;
+ 208:radio/radio.c **** 	set_register(SETUP_RETR, &value, 1);
+ 209:radio/radio.c **** 
+ 210:radio/radio.c **** 	// Set to use 2.4 GHz channel 110.
+ 211:radio/radio.c **** 	value = CHANNEL;
+ 212:radio/radio.c **** 	set_register(RF_CH, &value, 1);
+ 213:radio/radio.c **** 
+ 214:radio/radio.c **** 	// Set radio to 2 Mbps and high power.  Leave LNA_HCURR at its default.
+ 215:radio/radio.c **** 	value = _BV(RF_DR) | _BV(LNA_HCURR);
+ 216:radio/radio.c **** 	set_register(RF_SETUP, &value, 1);
+ 217:radio/radio.c **** 
+ 218:radio/radio.c **** 	// Enable 2-byte CRC and power up in receive mode.
+ 219:radio/radio.c **** 	value = _BV(EN_CRC) | _BV(CRCO) | _BV(PWR_UP) | _BV(PRIM_RX);
+ 220:radio/radio.c **** 	set_register(CONFIG, &value, 1);
+ 221:radio/radio.c **** 
+ 222:radio/radio.c **** 	// clear the interrupt flags in case the radio's still asserting an old unhandled interrupt
+ 223:radio/radio.c ****     value = _BV(RX_DR) | _BV(TX_DS) | _BV(MAX_RT);
+ 224:radio/radio.c ****     set_register(STATUS, &value, 1);
+ 225:radio/radio.c **** 
+ 226:radio/radio.c ****     // flush the FIFOs in case there are old data in them.
+ 227:radio/radio.c **** 	send_instruction(FLUSH_TX, NULL, NULL, 0);
+ 228:radio/radio.c **** 	send_instruction(FLUSH_RX, NULL, NULL, 0);
+ 229:radio/radio.c **** }
+ 230:radio/radio.c **** 
+ 231:radio/radio.c **** void Radio_Init()
+ 232:radio/radio.c **** {
+ 534               		.stabn	68,0,233,.LM39-.LFBB7
+ 535               	.LM39:
+ 536               	.LFBB7:
+ 537 0180 FF92      		push r15
+ 538 0182 0F93      		push r16
+ 539 0184 1F93      		push r17
+ 540 0186 DF93      		push r29
+ 541 0188 CF93      		push r28
+ 542 018a 0F92      		push __tmp_reg__
+GAS LISTING /tmp/cc00pSBt.s 			page 17
+
+
+ 543 018c CDB7      		in r28,__SP_L__
+ 544 018e DEB7      		in r29,__SP_H__
+ 545               	/* prologue: function */
+ 546               	/* frame size = 1 */
+ 547               	/* stack size = 6 */
+ 548               	.L__stack_usage = 6
+ 233:radio/radio.c **** 	
+ 234:radio/radio.c **** 
+ 235:radio/radio.c **** 
+ 236:radio/radio.c **** 	//
+ 237:radio/radio.c **** 	transmit_lock = 0;
+ 549               		.stabn	68,0,238,.LM40-.LFBB7
+ 550               	.LM40:
+ 551 0190 1092 0000 		sts transmit_lock,__zero_reg__
+ 238:radio/radio.c **** 
+ 239:radio/radio.c **** 	// disable radio during config
+ 240:radio/radio.c **** 	CE_LOW();
+ 552               		.stabn	68,0,241,.LM41-.LFBB7
+ 553               	.LM41:
+ 554 0194 9498      		cbi 50-0x20,4
+ 241:radio/radio.c **** 
+ 242:radio/radio.c **** 	// set as output AT90 pins connected to the radio's slave select and chip enable pins.
+ 243:radio/radio.c **** 	CE_DDR |= _BV(CE_PIN);
+ 555               		.stabn	68,0,244,.LM42-.LFBB7
+ 556               	.LM42:
+ 557 0196 8C9A      		sbi 49-0x20,4
+ 244:radio/radio.c **** 	CSN_DDR |= _BV(CSN_PIN);
+ 558               		.stabn	68,0,245,.LM43-.LFBB7
+ 559               	.LM43:
+ 560 0198 8D9A      		sbi 49-0x20,5
+ 245:radio/radio.c **** 
+ 246:radio/radio.c **** 	// Enable radio interrupt.  This interrupt is triggered when data are received and when a transmis
+ 247:radio/radio.c **** 	DDRD &= ~_BV(DDD3);
+ 561               		.stabn	68,0,248,.LM44-.LFBB7
+ 562               	.LM44:
+ 563 019a 8B98      		cbi 49-0x20,3
+ 248:radio/radio.c **** 	MCUCR |= _BV(ISC10);
+ 564               		.stabn	68,0,249,.LM45-.LFBB7
+ 565               	.LM45:
+ 566 019c 85B7      		in r24,85-0x20
+ 567 019e 8460      		ori r24,lo8(4)
+ 568 01a0 85BF      		out 85-0x20,r24
+ 249:radio/radio.c **** 	MCUCR &= ~_BV(ISC11);
+ 569               		.stabn	68,0,250,.LM46-.LFBB7
+ 570               	.LM46:
+ 571 01a2 85B7      		in r24,85-0x20
+ 572 01a4 877F      		andi r24,lo8(-9)
+ 573 01a6 85BF      		out 85-0x20,r24
+ 250:radio/radio.c **** 	GICR |= _BV(INT1);
+ 574               		.stabn	68,0,251,.LM47-.LFBB7
+ 575               	.LM47:
+ 576 01a8 8BB7      		in r24,91-0x20
+ 577 01aa 8068      		ori r24,lo8(-128)
+ 578 01ac 8BBF      		out 91-0x20,r24
+ 579               	.LBB102:
+ 580               	.LBB103:
+ 581               	.LBB104:
+GAS LISTING /tmp/cc00pSBt.s 			page 18
+
+
+ 582               	.LBB105:
+ 583               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h",132,0,0,.Ltext3
+ 584               	.Ltext3:
+ 585               		.stabn	68,0,105,.LM48-.LFBB7
+ 586               	.LM48:
+ 587 01ae 88EE      		ldi r24,lo8(-32536)
+ 588 01b0 90E8      		ldi r25,hi8(-32536)
+ 589               	/* #APP */
+ 590               	 ;  105 "/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h" 1
+ 591 01b2 0197      		1: sbiw r24,1
+ 592 01b4 01F4      		brne 1b
+ 593               	 ;  0 "" 2
+ 594               	/* #NOAPP */
+ 595               	.LBE105:
+ 596               	.LBE104:
+ 597               	.LBE103:
+ 598               	.LBE102:
+ 599               	.LBB106:
+ 600               	.LBB107:
+ 601               		.stabs	"radio/radio.c",132,0,0,.Ltext4
+ 602               	.Ltext4:
+ 195:radio/radio.c **** 	SPI_Init();
+ 603               		.stabn	68,0,195,.LM49-.LFBB7
+ 604               	.LM49:
+ 605 01b6 0E94 0000 		call SPI_Init
+ 197:radio/radio.c **** 	uint8_t status2 = get_status();
+ 606               		.stabn	68,0,197,.LM50-.LFBB7
+ 607               	.LM50:
+ 608 01ba 0E94 0000 		call get_status
+ 198:radio/radio.c **** 	snprintf(text, sizeof(text), "NOP: %x \n\r",status2);
+ 609               		.stabn	68,0,198,.LM51-.LFBB7
+ 610               	.LM51:
+ 611 01be 2DB7      		in r18,__SP_L__
+ 612 01c0 3EB7      		in r19,__SP_H__
+ 613 01c2 2850      		subi r18,lo8(-(-8))
+ 614 01c4 3040      		sbci r19,hi8(-(-8))
+ 615 01c6 0FB6      		in __tmp_reg__,__SREG__
+ 616 01c8 F894      		cli
+ 617 01ca 3EBF      		out __SP_H__,r19
+ 618 01cc 0FBE      		out __SREG__,__tmp_reg__
+ 619 01ce 2DBF      		out __SP_L__,r18
+ 620 01d0 EDB7      		in r30,__SP_L__
+ 621 01d2 FEB7      		in r31,__SP_H__
+ 622 01d4 3196      		adiw r30,1
+ 623 01d6 00E0      		ldi r16,lo8(text)
+ 624 01d8 10E0      		ldi r17,hi8(text)
+ 625 01da ADB7      		in r26,__SP_L__
+ 626 01dc BEB7      		in r27,__SP_H__
+ 627 01de 1296      		adiw r26,1+1
+ 628 01e0 1C93      		st X,r17
+ 629 01e2 0E93      		st -X,r16
+ 630 01e4 1197      		sbiw r26,1
+ 631 01e6 20E8      		ldi r18,lo8(128)
+ 632 01e8 30E0      		ldi r19,hi8(128)
+ 633 01ea 3383      		std Z+3,r19
+ 634 01ec 2283      		std Z+2,r18
+ 635 01ee 20E0      		ldi r18,lo8(.LC1)
+GAS LISTING /tmp/cc00pSBt.s 			page 19
+
+
+ 636 01f0 30E0      		ldi r19,hi8(.LC1)
+ 637 01f2 3583      		std Z+5,r19
+ 638 01f4 2483      		std Z+4,r18
+ 639 01f6 8683      		std Z+6,r24
+ 640 01f8 1782      		std Z+7,__zero_reg__
+ 641 01fa 0E94 0000 		call snprintf
+ 199:radio/radio.c **** 	put_str(text,0);
+ 642               		.stabn	68,0,199,.LM52-.LFBB7
+ 643               	.LM52:
+ 644 01fe 2DB7      		in r18,__SP_L__
+ 645 0200 3EB7      		in r19,__SP_H__
+ 646 0202 285F      		subi r18,lo8(-(8))
+ 647 0204 3F4F      		sbci r19,hi8(-(8))
+ 648 0206 0FB6      		in __tmp_reg__,__SREG__
+ 649 0208 F894      		cli
+ 650 020a 3EBF      		out __SP_H__,r19
+ 651 020c 0FBE      		out __SREG__,__tmp_reg__
+ 652 020e 2DBF      		out __SP_L__,r18
+ 653 0210 C801      		movw r24,r16
+ 654 0212 60E0      		ldi r22,lo8(0)
+ 655 0214 0E94 0000 		call put_str
+ 202:radio/radio.c **** 	value = ADDRESS_LENGTH - 2;			// 0b11 for 5 bytes, 0b10 for 4 bytes, 0b01 for 3 bytes
+ 656               		.stabn	68,0,202,.LM53-.LFBB7
+ 657               	.LM53:
+ 658 0218 83E0      		ldi r24,lo8(3)
+ 659 021a 8983      		std Y+1,r24
+ 203:radio/radio.c **** 	set_register(SETUP_AW, &value, 1);
+ 660               		.stabn	68,0,203,.LM54-.LFBB7
+ 661               	.LM54:
+ 662 021c 8E01      		movw r16,r28
+ 663 021e 0F5F      		subi r16,lo8(-(1))
+ 664 0220 1F4F      		sbci r17,hi8(-(1))
+ 665 0222 B801      		movw r22,r16
+ 666 0224 41E0      		ldi r20,lo8(1)
+ 667 0226 0E94 0000 		call set_register
+ 207:radio/radio.c **** 	value = 0x15;
+ 668               		.stabn	68,0,207,.LM55-.LFBB7
+ 669               	.LM55:
+ 670 022a 85E1      		ldi r24,lo8(21)
+ 671 022c 8983      		std Y+1,r24
+ 209:radio/radio.c **** 	set_register(SETUP_RETR, &value, 1);
+ 672               		.stabn	68,0,209,.LM56-.LFBB7
+ 673               	.LM56:
+ 674 022e 84E0      		ldi r24,lo8(4)
+ 675 0230 B801      		movw r22,r16
+ 676 0232 41E0      		ldi r20,lo8(1)
+ 677 0234 0E94 0000 		call set_register
+ 212:radio/radio.c **** 	value = CHANNEL;
+ 678               		.stabn	68,0,212,.LM57-.LFBB7
+ 679               	.LM57:
+ 680 0238 90E7      		ldi r25,lo8(112)
+ 681 023a F92E      		mov r15,r25
+ 682 023c F982      		std Y+1,r15
+ 213:radio/radio.c **** 	set_register(RF_CH, &value, 1);
+ 683               		.stabn	68,0,213,.LM58-.LFBB7
+ 684               	.LM58:
+ 685 023e 85E0      		ldi r24,lo8(5)
+GAS LISTING /tmp/cc00pSBt.s 			page 20
+
+
+ 686 0240 B801      		movw r22,r16
+ 687 0242 41E0      		ldi r20,lo8(1)
+ 688 0244 0E94 0000 		call set_register
+ 216:radio/radio.c **** 	value = _BV(RF_DR) | _BV(LNA_HCURR);
+ 689               		.stabn	68,0,216,.LM59-.LFBB7
+ 690               	.LM59:
+ 691 0248 89E0      		ldi r24,lo8(9)
+ 692 024a 8983      		std Y+1,r24
+ 217:radio/radio.c **** 	set_register(RF_SETUP, &value, 1);
+ 693               		.stabn	68,0,217,.LM60-.LFBB7
+ 694               	.LM60:
+ 695 024c 86E0      		ldi r24,lo8(6)
+ 696 024e B801      		movw r22,r16
+ 697 0250 41E0      		ldi r20,lo8(1)
+ 698 0252 0E94 0000 		call set_register
+ 220:radio/radio.c **** 	value = _BV(EN_CRC) | _BV(CRCO) | _BV(PWR_UP) | _BV(PRIM_RX);
+ 699               		.stabn	68,0,220,.LM61-.LFBB7
+ 700               	.LM61:
+ 701 0256 8FE0      		ldi r24,lo8(15)
+ 702 0258 8983      		std Y+1,r24
+ 221:radio/radio.c **** 	set_register(CONFIG, &value, 1);
+ 703               		.stabn	68,0,221,.LM62-.LFBB7
+ 704               	.LM62:
+ 705 025a 80E0      		ldi r24,lo8(0)
+ 706 025c B801      		movw r22,r16
+ 707 025e 41E0      		ldi r20,lo8(1)
+ 708 0260 0E94 0000 		call set_register
+ 224:radio/radio.c ****     value = _BV(RX_DR) | _BV(TX_DS) | _BV(MAX_RT);
+ 709               		.stabn	68,0,224,.LM63-.LFBB7
+ 710               	.LM63:
+ 711 0264 F982      		std Y+1,r15
+ 225:radio/radio.c ****     set_register(STATUS, &value, 1);
+ 712               		.stabn	68,0,225,.LM64-.LFBB7
+ 713               	.LM64:
+ 714 0266 87E0      		ldi r24,lo8(7)
+ 715 0268 B801      		movw r22,r16
+ 716 026a 41E0      		ldi r20,lo8(1)
+ 717 026c 0E94 0000 		call set_register
+ 228:radio/radio.c **** 	send_instruction(FLUSH_TX, NULL, NULL, 0);
+ 718               		.stabn	68,0,228,.LM65-.LFBB7
+ 719               	.LM65:
+ 720 0270 81EE      		ldi r24,lo8(-31)
+ 721 0272 60E0      		ldi r22,lo8(0)
+ 722 0274 70E0      		ldi r23,hi8(0)
+ 723 0276 40E0      		ldi r20,lo8(0)
+ 724 0278 50E0      		ldi r21,hi8(0)
+ 725 027a 20E0      		ldi r18,lo8(0)
+ 726 027c 0E94 0000 		call send_instruction
+ 229:radio/radio.c **** 	send_instruction(FLUSH_RX, NULL, NULL, 0);
+ 727               		.stabn	68,0,229,.LM66-.LFBB7
+ 728               	.LM66:
+ 729 0280 82EE      		ldi r24,lo8(-30)
+ 730 0282 60E0      		ldi r22,lo8(0)
+ 731 0284 70E0      		ldi r23,hi8(0)
+ 732 0286 40E0      		ldi r20,lo8(0)
+ 733 0288 50E0      		ldi r21,hi8(0)
+ 734 028a 20E0      		ldi r18,lo8(0)
+GAS LISTING /tmp/cc00pSBt.s 			page 21
+
+
+ 735 028c 0E94 0000 		call send_instruction
+ 736               	.LBE107:
+ 737               	.LBE106:
+ 738               	.LBB108:
+ 739               	.LBB109:
+ 740               	.LBB110:
+ 741               	.LBB111:
+ 742               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h",132,0,0,.Ltext5
+ 743               	.Ltext5:
+ 744               		.stabn	68,0,105,.LM67-.LFBB7
+ 745               	.LM67:
+ 746 0290 80E7      		ldi r24,lo8(6000)
+ 747 0292 97E1      		ldi r25,hi8(6000)
+ 748               	/* #APP */
+ 749               	 ;  105 "/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h" 1
+ 750 0294 0197      		1: sbiw r24,1
+ 751 0296 01F4      		brne 1b
+ 752               	 ;  0 "" 2
+ 753               	/* #NOAPP */
+ 754               	.LBE111:
+ 755               	.LBE110:
+ 756               	.LBE109:
+ 757               	.LBE108:
+ 758               		.stabs	"radio/radio.c",132,0,0,.Ltext6
+ 759               	.Ltext6:
+ 251:radio/radio.c **** 
+ 252:radio/radio.c **** 	// A 10.3 ms delay is required between power off and power on states (controlled by 3.3 V supply).
+ 253:radio/radio.c **** 	_delay_ms(11);
+ 254:radio/radio.c **** 
+ 255:radio/radio.c **** 	// Configure the radio registers that are not application-dependent.
+ 256:radio/radio.c **** 	configure_registers();
+ 257:radio/radio.c **** 
+ 258:radio/radio.c **** 	// A 1.5 ms delay is required between power down and power up states (controlled by PWR_UP bit in 
+ 259:radio/radio.c **** 	_delay_ms(2);
+ 260:radio/radio.c **** 
+ 261:radio/radio.c **** 	// enable radio as a receiver
+ 262:radio/radio.c **** 	CE_HIGH();
+ 760               		.stabn	68,0,263,.LM68-.LFBB7
+ 761               	.LM68:
+ 762 0298 949A      		sbi 50-0x20,4
+ 263:radio/radio.c **** 	sei();
+ 763               		.stabn	68,0,264,.LM69-.LFBB7
+ 764               	.LM69:
+ 765               	/* #APP */
+ 766               	 ;  264 "radio/radio.c" 1
+ 767 029a 7894      		sei
+ 768               	 ;  0 "" 2
+ 769               	/* epilogue start */
+ 264:radio/radio.c **** 
+ 265:radio/radio.c **** 
+ 266:radio/radio.c **** }
+ 770               		.stabn	68,0,267,.LM70-.LFBB7
+ 771               	.LM70:
+ 772               	/* #NOAPP */
+ 773 029c 0F90      		pop __tmp_reg__
+ 774 029e CF91      		pop r28
+ 775 02a0 DF91      		pop r29
+GAS LISTING /tmp/cc00pSBt.s 			page 22
+
+
+ 776 02a2 1F91      		pop r17
+ 777 02a4 0F91      		pop r16
+ 778 02a6 FF90      		pop r15
+ 779 02a8 0895      		ret
+ 780               		.size	Radio_Init, .-Radio_Init
+ 781               		.stabs	"value:(7,2)",128,0,193,1
+ 782               		.stabn	192,0,0,.LBB107-.LFBB7
+ 783               		.stabn	224,0,0,.LBE107-.LFBB7
+ 784               	.Lscope7:
+ 785               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 786               		.stabd	78,0,0
+ 787               		.stabs	"Radio_Configure_Rx:F(0,15)",36,0,275,Radio_Configure_Rx
+ 788               		.stabs	"pipe:P(1,2)",64,0,275,25
+ 789               		.stabs	"address:P(0,16)",64,0,275,30
+ 790               		.stabs	"enable:P(7,2)",64,0,275,13
+ 791               	.global	Radio_Configure_Rx
+ 792               		.type	Radio_Configure_Rx, @function
+ 793               	Radio_Configure_Rx:
+ 794               		.stabd	46,0,0
+ 267:radio/radio.c **** 
+ 268:radio/radio.c **** // default address for pipe 0 is 0xe7e7e7e7e7
+ 269:radio/radio.c **** // default address for pipe 1 is 0xc2c2c2c2c2
+ 270:radio/radio.c **** // default address for pipe 2 is 0xc2c2c2c2c3 (disabled)
+ 271:radio/radio.c **** // default address for pipe 3 is 0xc2c2c2c2c4 (disabled)
+ 272:radio/radio.c **** // default address for pipe 4 is 0xc2c2c2c2c5 (disabled)
+ 273:radio/radio.c **** // default address for pipe 5 is 0xc2c2c2c2c6 (disabled)
+ 274:radio/radio.c **** void Radio_Configure_Rx(RADIO_PIPE pipe, uint8_t* address, uint8_t enable)
+ 275:radio/radio.c **** {
+ 795               		.stabn	68,0,276,.LM71-.LFBB8
+ 796               	.LM71:
+ 797               	.LFBB8:
+ 798 02aa CF92      		push r12
+ 799 02ac DF92      		push r13
+ 800 02ae EF92      		push r14
+ 801 02b0 FF92      		push r15
+ 802 02b2 0F93      		push r16
+ 803 02b4 1F93      		push r17
+ 804 02b6 DF93      		push r29
+ 805 02b8 CF93      		push r28
+ 806 02ba 00D0      		rcall .
+ 807 02bc CDB7      		in r28,__SP_L__
+ 808 02be DEB7      		in r29,__SP_H__
+ 809               	/* prologue: function */
+ 810               	/* frame size = 2 */
+ 811               	/* stack size = 10 */
+ 812               	.L__stack_usage = 10
+ 813 02c0 982F      		mov r25,r24
+ 814 02c2 FB01      		movw r30,r22
+ 815 02c4 D42E      		mov r13,r20
+ 276:radio/radio.c **** 	uint8_t value;
+ 277:radio/radio.c **** 	uint8_t use_aa = 1;
+ 278:radio/radio.c **** 	uint8_t payload_width = 32;
+ 279:radio/radio.c **** 	if (payload_width < 1 || payload_width > 32 || pipe < RADIO_PIPE_0 || pipe > RADIO_PIPE_5) return;
+ 816               		.stabn	68,0,280,.LM72-.LFBB8
+ 817               	.LM72:
+ 818 02c6 8630      		cpi r24,lo8(6)
+ 819 02c8 00F0      		brlo .+2
+GAS LISTING /tmp/cc00pSBt.s 			page 23
+
+
+ 820 02ca 00C0      		rjmp .L12
+ 280:radio/radio.c **** 
+ 281:radio/radio.c **** 	// store the pipe 0 address so that it can be overwritten when transmitting with auto-ack enabled.
+ 282:radio/radio.c **** 	if (pipe == RADIO_PIPE_0)
+ 821               		.stabn	68,0,283,.LM73-.LFBB8
+ 822               	.LM73:
+ 823 02cc 8823      		tst r24
+ 824 02ce 01F4      		brne .L14
+ 283:radio/radio.c **** 	{
+ 284:radio/radio.c **** 		rx_pipe0_address[0] = address[0];
+ 825               		.stabn	68,0,285,.LM74-.LFBB8
+ 826               	.LM74:
+ 827 02d0 8081      		ld r24,Z
+ 828 02d2 8093 0000 		sts rx_pipe0_address,r24
+ 285:radio/radio.c **** 		rx_pipe0_address[1] = address[1];
+ 829               		.stabn	68,0,286,.LM75-.LFBB8
+ 830               	.LM75:
+ 831 02d6 8181      		ldd r24,Z+1
+ 832 02d8 8093 0000 		sts rx_pipe0_address+1,r24
+ 286:radio/radio.c **** 		rx_pipe0_address[2] = address[2];
+ 833               		.stabn	68,0,287,.LM76-.LFBB8
+ 834               	.LM76:
+ 835 02dc 8281      		ldd r24,Z+2
+ 836 02de 8093 0000 		sts rx_pipe0_address+2,r24
+ 287:radio/radio.c **** 		rx_pipe0_address[3] = address[3];
+ 837               		.stabn	68,0,288,.LM77-.LFBB8
+ 838               	.LM77:
+ 839 02e2 8381      		ldd r24,Z+3
+ 840 02e4 8093 0000 		sts rx_pipe0_address+3,r24
+ 288:radio/radio.c **** 		rx_pipe0_address[4] = address[4];
+ 841               		.stabn	68,0,289,.LM78-.LFBB8
+ 842               	.LM78:
+ 843 02e8 8481      		ldd r24,Z+4
+ 844 02ea 8093 0000 		sts rx_pipe0_address+4,r24
+ 845               	.L14:
+ 289:radio/radio.c **** 	}
+ 290:radio/radio.c **** 
+ 291:radio/radio.c **** 	// Set the address.  We set this stuff even if the pipe is being disabled, because for example the
+ 292:radio/radio.c **** 	// needs pipe 0 to have the same address as the Tx address for auto-ack to work, even if pipe 0 is
+ 293:radio/radio.c **** 	set_register(RX_ADDR_P0 + pipe, address, pipe > RADIO_PIPE_1 ? 1 : ADDRESS_LENGTH);
+ 846               		.stabn	68,0,294,.LM79-.LFBB8
+ 847               	.LM79:
+ 848 02ee 892F      		mov r24,r25
+ 849 02f0 865F      		subi r24,lo8(-(10))
+ 850 02f2 9230      		cpi r25,lo8(2)
+ 851 02f4 00F0      		brlo .L19
+ 852 02f6 41E0      		ldi r20,lo8(1)
+ 853 02f8 00C0      		rjmp .L15
+ 854               	.L19:
+ 855 02fa 45E0      		ldi r20,lo8(5)
+ 856               	.L15:
+ 857               		.stabn	68,0,294,.LM80-.LFBB8
+ 858               	.LM80:
+ 859 02fc BF01      		movw r22,r30
+ 860 02fe 9A83      		std Y+2,r25
+ 861 0300 0E94 0000 		call set_register
+ 294:radio/radio.c **** 
+GAS LISTING /tmp/cc00pSBt.s 			page 24
+
+
+ 295:radio/radio.c **** 	// Set auto-ack.
+ 296:radio/radio.c **** 	get_register(EN_AA, &value, 1);
+ 862               		.stabn	68,0,297,.LM81-.LFBB8
+ 863               	.LM81:
+ 864 0304 81E0      		ldi r24,lo8(1)
+ 865 0306 8E01      		movw r16,r28
+ 866 0308 0F5F      		subi r16,lo8(-(1))
+ 867 030a 1F4F      		sbci r17,hi8(-(1))
+ 868 030c B801      		movw r22,r16
+ 869 030e 0E94 0000 		call get_register.clone.0
+ 297:radio/radio.c **** 	if (use_aa)
+ 298:radio/radio.c **** 		value |= _BV(pipe);
+ 870               		.stabn	68,0,299,.LM82-.LFBB8
+ 871               	.LM82:
+ 872 0312 9A81      		ldd r25,Y+2
+ 873 0314 E92E      		mov r14,r25
+ 874 0316 FF24      		clr r15
+ 875 0318 21E0      		ldi r18,lo8(1)
+ 876 031a 30E0      		ldi r19,hi8(1)
+ 877 031c 00C0      		rjmp 2f
+ 878 031e 220F      	1:	lsl r18
+ 879 0320 331F      		rol r19
+ 880 0322 9A95      	2:	dec r25
+ 881 0324 02F4      		brpl 1b
+ 882 0326 C22E      		mov r12,r18
+ 883 0328 8981      		ldd r24,Y+1
+ 884 032a 822B      		or r24,r18
+ 885 032c 8983      		std Y+1,r24
+ 299:radio/radio.c **** 	else
+ 300:radio/radio.c **** 		value &= ~_BV(pipe);
+ 301:radio/radio.c **** 	set_register(EN_AA, &value, 1);
+ 886               		.stabn	68,0,302,.LM83-.LFBB8
+ 887               	.LM83:
+ 888 032e 81E0      		ldi r24,lo8(1)
+ 889 0330 B801      		movw r22,r16
+ 890 0332 41E0      		ldi r20,lo8(1)
+ 891 0334 0E94 0000 		call set_register
+ 302:radio/radio.c **** 
+ 303:radio/radio.c **** 	// Set the pipe's payload width.  If the pipe is being disabled, then the payload width is set to 
+ 304:radio/radio.c **** 	value = enable ? payload_width : 0;
+ 892               		.stabn	68,0,305,.LM84-.LFBB8
+ 893               	.LM84:
+ 894 0338 9A81      		ldd r25,Y+2
+ 895 033a DD20      		tst r13
+ 896 033c 01F0      		breq .L20
+ 897               		.stabn	68,0,305,.LM85-.LFBB8
+ 898               	.LM85:
+ 899 033e 80E2      		ldi r24,lo8(32)
+ 900 0340 00C0      		rjmp .L16
+ 901               	.L20:
+ 902 0342 80E0      		ldi r24,lo8(0)
+ 903               	.L16:
+ 904               		.stabn	68,0,305,.LM86-.LFBB8
+ 905               	.LM86:
+ 906 0344 8983      		std Y+1,r24
+ 305:radio/radio.c **** 	set_register(RX_PW_P0 + pipe, &value, 1);
+ 907               		.stabn	68,0,306,.LM87-.LFBB8
+GAS LISTING /tmp/cc00pSBt.s 			page 25
+
+
+ 908               	.LM87:
+ 909 0346 892F      		mov r24,r25
+ 910 0348 8F5E      		subi r24,lo8(-(17))
+ 911 034a 8E01      		movw r16,r28
+ 912 034c 0F5F      		subi r16,lo8(-(1))
+ 913 034e 1F4F      		sbci r17,hi8(-(1))
+ 914 0350 B801      		movw r22,r16
+ 915 0352 41E0      		ldi r20,lo8(1)
+ 916 0354 0E94 0000 		call set_register
+ 306:radio/radio.c **** 	rx_pipe_widths[pipe] = value;
+ 917               		.stabn	68,0,307,.LM88-.LFBB8
+ 918               	.LM88:
+ 919 0358 8981      		ldd r24,Y+1
+ 920 035a F701      		movw r30,r14
+ 921 035c E050      		subi r30,lo8(-(rx_pipe_widths))
+ 922 035e F040      		sbci r31,hi8(-(rx_pipe_widths))
+ 923 0360 8083      		st Z,r24
+ 307:radio/radio.c **** 
+ 308:radio/radio.c **** 	// Enable or disable the pipe.
+ 309:radio/radio.c **** 	get_register(EN_RXADDR, &value, 1);
+ 924               		.stabn	68,0,310,.LM89-.LFBB8
+ 925               	.LM89:
+ 926 0362 82E0      		ldi r24,lo8(2)
+ 927 0364 B801      		movw r22,r16
+ 928 0366 0E94 0000 		call get_register.clone.0
+ 929 036a 2981      		ldd r18,Y+1
+ 310:radio/radio.c **** 	if (enable)
+ 930               		.stabn	68,0,311,.LM90-.LFBB8
+ 931               	.LM90:
+ 932 036c DD20      		tst r13
+ 933 036e 01F0      		breq .L17
+ 311:radio/radio.c **** 		value |= _BV(pipe);
+ 934               		.stabn	68,0,312,.LM91-.LFBB8
+ 935               	.LM91:
+ 936 0370 2C29      		or r18,r12
+ 937 0372 2983      		std Y+1,r18
+ 938 0374 00C0      		rjmp .L18
+ 939               	.L17:
+ 312:radio/radio.c **** 	else
+ 313:radio/radio.c **** 		value &= ~_BV(pipe);
+ 940               		.stabn	68,0,314,.LM92-.LFBB8
+ 941               	.LM92:
+ 942 0376 C094      		com r12
+ 943 0378 C222      		and r12,r18
+ 944 037a C982      		std Y+1,r12
+ 945               	.L18:
+ 314:radio/radio.c **** 	set_register(EN_RXADDR, &value, 1);
+ 946               		.stabn	68,0,315,.LM93-.LFBB8
+ 947               	.LM93:
+ 948 037c 82E0      		ldi r24,lo8(2)
+ 949 037e BE01      		movw r22,r28
+ 950 0380 6F5F      		subi r22,lo8(-(1))
+ 951 0382 7F4F      		sbci r23,hi8(-(1))
+ 952 0384 41E0      		ldi r20,lo8(1)
+ 953 0386 0E94 0000 		call set_register
+ 954               	.L12:
+ 955               	/* epilogue start */
+GAS LISTING /tmp/cc00pSBt.s 			page 26
+
+
+ 315:radio/radio.c **** 
+ 316:radio/radio.c **** }
+ 956               		.stabn	68,0,317,.LM94-.LFBB8
+ 957               	.LM94:
+ 958 038a 0F90      		pop __tmp_reg__
+ 959 038c 0F90      		pop __tmp_reg__
+ 960 038e CF91      		pop r28
+ 961 0390 DF91      		pop r29
+ 962 0392 1F91      		pop r17
+ 963 0394 0F91      		pop r16
+ 964 0396 FF90      		pop r15
+ 965 0398 EF90      		pop r14
+ 966 039a DF90      		pop r13
+ 967 039c CF90      		pop r12
+ 968 039e 0895      		ret
+ 969               		.size	Radio_Configure_Rx, .-Radio_Configure_Rx
+ 970               		.stabs	"value:(7,2)",128,0,277,1
+ 971               		.stabs	"payload_width:r(7,2)",64,0,279,24
+ 972               		.stabn	192,0,0,.LFBB8-.LFBB8
+ 973               		.stabn	224,0,0,.Lscope8-.LFBB8
+ 974               	.Lscope8:
+ 975               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 976               		.stabd	78,0,0
+ 977               		.stabs	"Radio_Set_Tx_Addr:F(0,15)",36,0,320,Radio_Set_Tx_Addr
+ 978               		.stabs	"address:P(0,16)",64,0,320,30
+ 979               	.global	Radio_Set_Tx_Addr
+ 980               		.type	Radio_Set_Tx_Addr, @function
+ 981               	Radio_Set_Tx_Addr:
+ 982               		.stabd	46,0,0
+ 317:radio/radio.c **** 
+ 318:radio/radio.c **** // default transmitter address is 0xe7e7e7e7e7.
+ 319:radio/radio.c **** void Radio_Set_Tx_Addr(uint8_t* address)
+ 320:radio/radio.c **** {
+ 983               		.stabn	68,0,321,.LM95-.LFBB9
+ 984               	.LM95:
+ 985               	.LFBB9:
+ 986               	/* prologue: function */
+ 987               	/* frame size = 0 */
+ 988               	/* stack size = 0 */
+ 989               	.L__stack_usage = 0
+ 990 03a0 FC01      		movw r30,r24
+ 321:radio/radio.c **** 	tx_address[0] = address[0];
+ 991               		.stabn	68,0,322,.LM96-.LFBB9
+ 992               	.LM96:
+ 993 03a2 8081      		ld r24,Z
+ 994 03a4 8093 0000 		sts tx_address,r24
+ 322:radio/radio.c **** 	tx_address[1] = address[1];
+ 995               		.stabn	68,0,323,.LM97-.LFBB9
+ 996               	.LM97:
+ 997 03a8 8181      		ldd r24,Z+1
+ 998 03aa 8093 0000 		sts tx_address+1,r24
+ 323:radio/radio.c **** 	tx_address[2] = address[2];
+ 999               		.stabn	68,0,324,.LM98-.LFBB9
+ 1000               	.LM98:
+ 1001 03ae 8281      		ldd r24,Z+2
+ 1002 03b0 8093 0000 		sts tx_address+2,r24
+ 324:radio/radio.c **** 	tx_address[3] = address[3];
+GAS LISTING /tmp/cc00pSBt.s 			page 27
+
+
+ 1003               		.stabn	68,0,325,.LM99-.LFBB9
+ 1004               	.LM99:
+ 1005 03b4 8381      		ldd r24,Z+3
+ 1006 03b6 8093 0000 		sts tx_address+3,r24
+ 325:radio/radio.c **** 	tx_address[4] = address[4];
+ 1007               		.stabn	68,0,326,.LM100-.LFBB9
+ 1008               	.LM100:
+ 1009 03ba 8481      		ldd r24,Z+4
+ 1010 03bc 8093 0000 		sts tx_address+4,r24
+ 326:radio/radio.c **** 	set_register(TX_ADDR, address, ADDRESS_LENGTH);
+ 1011               		.stabn	68,0,327,.LM101-.LFBB9
+ 1012               	.LM101:
+ 1013 03c0 80E1      		ldi r24,lo8(16)
+ 1014 03c2 BF01      		movw r22,r30
+ 1015 03c4 45E0      		ldi r20,lo8(5)
+ 1016 03c6 0E94 0000 		call set_register
+ 1017               	/* epilogue start */
+ 327:radio/radio.c **** }
+ 1018               		.stabn	68,0,328,.LM102-.LFBB9
+ 1019               	.LM102:
+ 1020 03ca 0895      		ret
+ 1021               		.size	Radio_Set_Tx_Addr, .-Radio_Set_Tx_Addr
+ 1022               	.Lscope9:
+ 1023               		.stabs	"",36,0,0,.Lscope9-.LFBB9
+ 1024               		.stabd	78,0,0
+ 1025               		.stabs	"Radio_Configure:F(0,15)",36,0,330,Radio_Configure
+ 1026               		.stabs	"dr:P(1,6)",64,0,330,17
+ 1027               		.stabs	"power:P(1,4)",64,0,330,16
+ 1028               	.global	Radio_Configure
+ 1029               		.type	Radio_Configure, @function
+ 1030               	Radio_Configure:
+ 1031               		.stabd	46,0,0
+ 328:radio/radio.c **** 
+ 329:radio/radio.c **** void Radio_Configure(RADIO_DATA_RATE dr, RADIO_TX_POWER power)
+ 330:radio/radio.c **** {
+ 1032               		.stabn	68,0,331,.LM103-.LFBB10
+ 1033               	.LM103:
+ 1034               	.LFBB10:
+ 1035 03cc 0F93      		push r16
+ 1036 03ce 1F93      		push r17
+ 1037 03d0 DF93      		push r29
+ 1038 03d2 CF93      		push r28
+ 1039 03d4 0F92      		push __tmp_reg__
+ 1040 03d6 CDB7      		in r28,__SP_L__
+ 1041 03d8 DEB7      		in r29,__SP_H__
+ 1042               	/* prologue: function */
+ 1043               	/* frame size = 1 */
+ 1044               	/* stack size = 5 */
+ 1045               	.L__stack_usage = 5
+ 1046 03da 182F      		mov r17,r24
+ 1047 03dc 062F      		mov r16,r22
+ 331:radio/radio.c **** 	uint8_t value;
+ 332:radio/radio.c **** 
+ 333:radio/radio.c **** 	if (power < RADIO_LOWEST_POWER || power > RADIO_HIGHEST_POWER || dr < RADIO_1MBPS || dr > RADIO_2M
+ 1048               		.stabn	68,0,334,.LM104-.LFBB10
+ 1049               	.LM104:
+ 1050 03de 6430      		cpi r22,lo8(4)
+GAS LISTING /tmp/cc00pSBt.s 			page 28
+
+
+ 1051 03e0 00F4      		brsh .L22
+ 1052               		.stabn	68,0,334,.LM105-.LFBB10
+ 1053               	.LM105:
+ 1054 03e2 8230      		cpi r24,lo8(2)
+ 1055 03e4 00F4      		brsh .L22
+ 334:radio/radio.c **** 
+ 335:radio/radio.c **** 	// set the address
+ 336:radio/radio.c **** 	//Radio_Set_Tx_Addr(address);
+ 337:radio/radio.c **** 
+ 338:radio/radio.c **** 	// set the data rate and power bits in the RF_SETUP register
+ 339:radio/radio.c **** 	get_register(RF_SETUP, &value, 1);
+ 1056               		.stabn	68,0,340,.LM106-.LFBB10
+ 1057               	.LM106:
+ 1058 03e6 86E0      		ldi r24,lo8(6)
+ 1059 03e8 BE01      		movw r22,r28
+ 1060 03ea 6F5F      		subi r22,lo8(-(1))
+ 1061 03ec 7F4F      		sbci r23,hi8(-(1))
+ 1062 03ee 0E94 0000 		call get_register.clone.0
+ 340:radio/radio.c **** 
+ 341:radio/radio.c **** 	value |= 3 << RF_PWR;			// set the power bits so that the & will mask the power value in properly.
+ 342:radio/radio.c **** 	value &= power << RF_PWR;		// mask the power value into the RF status byte.
+ 1063               		.stabn	68,0,343,.LM107-.LFBB10
+ 1064               	.LM107:
+ 1065 03f2 000F      		lsl r16
+ 342:radio/radio.c **** 	value &= power << RF_PWR;		// mask the power value into the RF status byte.
+ 1066               		.stabn	68,0,342,.LM108-.LFBB10
+ 1067               	.LM108:
+ 1068 03f4 8981      		ldd r24,Y+1
+ 1069 03f6 8660      		ori r24,lo8(6)
+ 1070               		.stabn	68,0,343,.LM109-.LFBB10
+ 1071               	.LM109:
+ 1072 03f8 0823      		and r16,r24
+ 343:radio/radio.c **** 
+ 344:radio/radio.c **** 	if (dr)
+ 1073               		.stabn	68,0,345,.LM110-.LFBB10
+ 1074               	.LM110:
+ 1075 03fa 1123      		tst r17
+ 1076 03fc 01F0      		breq .L24
+ 345:radio/radio.c **** 		value |= _BV(RF_DR);
+ 1077               		.stabn	68,0,346,.LM111-.LFBB10
+ 1078               	.LM111:
+ 1079 03fe 0860      		ori r16,lo8(8)
+ 1080 0400 00C0      		rjmp .L26
+ 1081               	.L24:
+ 346:radio/radio.c **** 	else
+ 347:radio/radio.c **** 		value &= ~_BV(RF_DR);
+ 1082               		.stabn	68,0,348,.LM112-.LFBB10
+ 1083               	.LM112:
+ 1084 0402 077F      		andi r16,lo8(-9)
+ 1085               	.L26:
+ 1086 0404 0983      		std Y+1,r16
+ 348:radio/radio.c **** 
+ 349:radio/radio.c **** 	set_register(RF_SETUP, &value, 1);
+ 1087               		.stabn	68,0,350,.LM113-.LFBB10
+ 1088               	.LM113:
+ 1089 0406 86E0      		ldi r24,lo8(6)
+ 1090 0408 BE01      		movw r22,r28
+GAS LISTING /tmp/cc00pSBt.s 			page 29
+
+
+ 1091 040a 6F5F      		subi r22,lo8(-(1))
+ 1092 040c 7F4F      		sbci r23,hi8(-(1))
+ 1093 040e 41E0      		ldi r20,lo8(1)
+ 1094 0410 0E94 0000 		call set_register
+ 1095               	.L22:
+ 1096               	/* epilogue start */
+ 350:radio/radio.c **** }
+ 1097               		.stabn	68,0,351,.LM114-.LFBB10
+ 1098               	.LM114:
+ 1099 0414 0F90      		pop __tmp_reg__
+ 1100 0416 CF91      		pop r28
+ 1101 0418 DF91      		pop r29
+ 1102 041a 1F91      		pop r17
+ 1103 041c 0F91      		pop r16
+ 1104 041e 0895      		ret
+ 1105               		.size	Radio_Configure, .-Radio_Configure
+ 1106               		.stabs	"value:(7,2)",128,0,332,1
+ 1107               		.stabn	192,0,0,.LFBB10-.LFBB10
+ 1108               		.stabn	224,0,0,.Lscope10-.LFBB10
+ 1109               	.Lscope10:
+ 1110               		.stabs	"",36,0,0,.Lscope10-.LFBB10
+ 1111               		.stabd	78,0,0
+ 1112               		.stabs	"Radio_Transmit:F(7,2)",36,0,353,Radio_Transmit
+ 1113               		.stabs	"payload:P(0,17)=*(10,13)",64,0,353,14
+ 1114               		.stabs	"wait:P(1,12)",64,0,353,13
+ 1115               	.global	Radio_Transmit
+ 1116               		.type	Radio_Transmit, @function
+ 1117               	Radio_Transmit:
+ 1118               		.stabd	46,0,0
+ 351:radio/radio.c **** 
+ 352:radio/radio.c **** uint8_t Radio_Transmit(radiopacket_t* payload, RADIO_TX_WAIT wait)
+ 353:radio/radio.c **** {
+ 1119               		.stabn	68,0,354,.LM115-.LFBB11
+ 1120               	.LM115:
+ 1121               	.LFBB11:
+ 1122 0420 DF92      		push r13
+ 1123 0422 EF92      		push r14
+ 1124 0424 FF92      		push r15
+ 1125 0426 0F93      		push r16
+ 1126 0428 1F93      		push r17
+ 1127 042a DF93      		push r29
+ 1128 042c CF93      		push r28
+ 1129 042e 0F92      		push __tmp_reg__
+ 1130 0430 CDB7      		in r28,__SP_L__
+ 1131 0432 DEB7      		in r29,__SP_H__
+ 1132               	/* prologue: function */
+ 1133               	/* frame size = 1 */
+ 1134               	/* stack size = 8 */
+ 1135               	.L__stack_usage = 8
+ 1136 0434 7C01      		movw r14,r24
+ 1137 0436 D62E      		mov r13,r22
+ 354:radio/radio.c **** 	//if (block && transmit_lock) while (transmit_lock);
+ 355:radio/radio.c **** 	//if (!block && transmit_lock) return 0;
+ 356:radio/radio.c **** 	uint8_t len = 32;
+ 357:radio/radio.c **** 
+ 358:radio/radio.c **** 	// indicate that the driver is transmitting.
+ 359:radio/radio.c ****     transmit_lock = 1;
+GAS LISTING /tmp/cc00pSBt.s 			page 30
+
+
+ 1138               		.stabn	68,0,360,.LM116-.LFBB11
+ 1139               	.LM116:
+ 1140 0438 81E0      		ldi r24,lo8(1)
+ 1141 043a 8093 0000 		sts transmit_lock,r24
+ 360:radio/radio.c **** 
+ 361:radio/radio.c **** 	// disable the radio while writing to the Tx FIFO.
+ 362:radio/radio.c ****     CE_LOW();
+ 1142               		.stabn	68,0,363,.LM117-.LFBB11
+ 1143               	.LM117:
+ 1144 043e 9498      		cbi 50-0x20,4
+ 1145               	.LBB112:
+ 1146               	.LBB113:
+ 159:radio/radio.c **** 	get_register(CONFIG, &config, 1);
+ 1147               		.stabn	68,0,159,.LM118-.LFBB11
+ 1148               	.LM118:
+ 1149 0440 80E0      		ldi r24,lo8(0)
+ 1150 0442 8E01      		movw r16,r28
+ 1151 0444 0F5F      		subi r16,lo8(-(1))
+ 1152 0446 1F4F      		sbci r17,hi8(-(1))
+ 1153 0448 B801      		movw r22,r16
+ 1154 044a 0E94 0000 		call get_register.clone.0
+ 160:radio/radio.c **** 	if ((config & _BV(PRIM_RX)) != 0)
+ 1155               		.stabn	68,0,160,.LM119-.LFBB11
+ 1156               	.LM119:
+ 1157 044e 8981      		ldd r24,Y+1
+ 1158 0450 80FF      		sbrs r24,0
+ 1159 0452 00C0      		rjmp .L28
+ 162:radio/radio.c **** 		config &= ~_BV(PRIM_RX);
+ 1160               		.stabn	68,0,162,.LM120-.LFBB11
+ 1161               	.LM120:
+ 1162 0454 8E7F      		andi r24,lo8(-2)
+ 1163 0456 8983      		std Y+1,r24
+ 163:radio/radio.c **** 		set_register(CONFIG, &config, 1);
+ 1164               		.stabn	68,0,163,.LM121-.LFBB11
+ 1165               	.LM121:
+ 1166 0458 80E0      		ldi r24,lo8(0)
+ 1167 045a B801      		movw r22,r16
+ 1168 045c 41E0      		ldi r20,lo8(1)
+ 1169 045e 0E94 0000 		call set_register
+ 1170               	.LBB114:
+ 1171               	.LBB115:
+ 1172               	.LBB116:
+ 1173               	.LBB117:
+ 1174               	.LBB118:
+ 1175               	.LBB119:
+ 1176               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h",132,0,0,.Ltext7
+ 1177               	.Ltext7:
+ 1178               		.stabn	68,0,105,.LM122-.LFBB11
+ 1179               	.LM122:
+ 1180 0462 83EC      		ldi r24,lo8(195)
+ 1181 0464 90E0      		ldi r25,hi8(195)
+ 1182 0466 FC01      		movw r30,r24
+ 1183               	/* #APP */
+ 1184               	 ;  105 "/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h" 1
+ 1185 0468 3197      		1: sbiw r30,1
+ 1186 046a 01F4      		brne 1b
+ 1187               	 ;  0 "" 2
+GAS LISTING /tmp/cc00pSBt.s 			page 31
+
+
+ 1188               	/* #NOAPP */
+ 1189               	.LBE119:
+ 1190               	.LBE118:
+ 1191               	.LBE117:
+ 1192               	.LBE116:
+ 1193               	.LBE115:
+ 1194               	.LBE114:
+ 1195               	.LBB120:
+ 1196               	.LBB121:
+ 1197               	.LBB122:
+ 1198               	.LBB123:
+ 1199               	.LBB124:
+ 1200               	.LBB125:
+ 1201               	/* #APP */
+ 1202               	 ;  105 "/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h" 1
+ 1203 046c 0197      		1: sbiw r24,1
+ 1204 046e 01F4      		brne 1b
+ 1205               	 ;  0 "" 2
+ 1206               	/* #NOAPP */
+ 1207               	.L28:
+ 1208               	.LBE125:
+ 1209               	.LBE124:
+ 1210               	.LBE123:
+ 1211               	.LBE122:
+ 1212               	.LBE121:
+ 1213               	.LBE120:
+ 1214               	.LBE113:
+ 1215               	.LBE112:
+ 1216               		.stabs	"radio/radio.c",132,0,0,.Ltext8
+ 1217               	.Ltext8:
+ 363:radio/radio.c **** 
+ 364:radio/radio.c **** 	set_tx_mode();
+ 365:radio/radio.c **** 
+ 366:radio/radio.c ****     // for auto-ack to work, the pipe0 address must be set to the Tx address while the radio is tra
+ 367:radio/radio.c ****     // The register will be set back to the original pipe 0 address when the TX_DS or MAX_RT interr
+ 368:radio/radio.c ****     set_register(RX_ADDR_P0, (uint8_t*)tx_address, ADDRESS_LENGTH);
+ 1218               		.stabn	68,0,369,.LM123-.LFBB11
+ 1219               	.LM123:
+ 1220 0470 8AE0      		ldi r24,lo8(10)
+ 1221 0472 60E0      		ldi r22,lo8(tx_address)
+ 1222 0474 70E0      		ldi r23,hi8(tx_address)
+ 1223 0476 45E0      		ldi r20,lo8(5)
+ 1224 0478 0E94 0000 		call set_register
+ 369:radio/radio.c **** 
+ 370:radio/radio.c ****     // transfer the packet to the radio's Tx FIFO for transmission
+ 371:radio/radio.c ****     send_instruction(W_TX_PAYLOAD, payload, NULL, len);
+ 1225               		.stabn	68,0,372,.LM124-.LFBB11
+ 1226               	.LM124:
+ 1227 047c 80EA      		ldi r24,lo8(-96)
+ 1228 047e B701      		movw r22,r14
+ 1229 0480 40E0      		ldi r20,lo8(0)
+ 1230 0482 50E0      		ldi r21,hi8(0)
+ 1231 0484 20E2      		ldi r18,lo8(32)
+ 1232 0486 0E94 0000 		call send_instruction
+ 372:radio/radio.c **** 
+ 373:radio/radio.c ****     // start the transmission.
+ 374:radio/radio.c ****     CE_HIGH();
+GAS LISTING /tmp/cc00pSBt.s 			page 32
+
+
+ 1233               		.stabn	68,0,375,.LM125-.LFBB11
+ 1234               	.LM125:
+ 1235 048a 949A      		sbi 50-0x20,4
+ 375:radio/radio.c **** 
+ 376:radio/radio.c ****     if (wait == RADIO_WAIT_FOR_TX)
+ 1236               		.stabn	68,0,377,.LM126-.LFBB11
+ 1237               	.LM126:
+ 1238 048c DD20      		tst r13
+ 1239 048e 01F4      		brne .L31
+ 1240               	.L32:
+ 377:radio/radio.c ****     {
+ 378:radio/radio.c ****     	while (transmit_lock);
+ 1241               		.stabn	68,0,379,.LM127-.LFBB11
+ 1242               	.LM127:
+ 1243 0490 8091 0000 		lds r24,transmit_lock
+ 1244 0494 8823      		tst r24
+ 1245 0496 01F4      		brne .L32
+ 379:radio/radio.c ****     	return tx_last_status;
+ 1246               		.stabn	68,0,380,.LM128-.LFBB11
+ 1247               	.LM128:
+ 1248 0498 8091 0000 		lds r24,tx_last_status
+ 1249 049c 00C0      		rjmp .L29
+ 1250               	.L31:
+ 380:radio/radio.c ****     }
+ 381:radio/radio.c **** 
+ 382:radio/radio.c ****     return RADIO_TX_SUCCESS;
+ 1251               		.stabn	68,0,383,.LM129-.LFBB11
+ 1252               	.LM129:
+ 1253 049e 81E0      		ldi r24,lo8(1)
+ 1254               	.L29:
+ 1255               	/* epilogue start */
+ 383:radio/radio.c **** }
+ 1256               		.stabn	68,0,384,.LM130-.LFBB11
+ 1257               	.LM130:
+ 1258 04a0 0F90      		pop __tmp_reg__
+ 1259 04a2 CF91      		pop r28
+ 1260 04a4 DF91      		pop r29
+ 1261 04a6 1F91      		pop r17
+ 1262 04a8 0F91      		pop r16
+ 1263 04aa FF90      		pop r15
+ 1264 04ac EF90      		pop r14
+ 1265 04ae DF90      		pop r13
+ 1266 04b0 0895      		ret
+ 1267               		.size	Radio_Transmit, .-Radio_Transmit
+ 1268               		.stabs	"config:(7,2)",128,0,158,1
+ 1269               		.stabn	192,0,0,.LBB113-.LFBB11
+ 1270               		.stabn	224,0,0,.LBE113-.LFBB11
+ 1271               	.Lscope11:
+ 1272               		.stabs	"",36,0,0,.Lscope11-.LFBB11
+ 1273               		.stabd	78,0,0
+ 1274               		.stabs	"Radio_Receive:F(1,8)",36,0,386,Radio_Receive
+ 1275               	.global	Radio_Receive
+ 1276               		.type	Radio_Receive, @function
+ 1277               	Radio_Receive:
+ 1278               		.stabd	46,0,0
+ 384:radio/radio.c **** 
+ 385:radio/radio.c **** RADIO_RX_STATUS Radio_Receive(radiopacket_t* buffer)
+GAS LISTING /tmp/cc00pSBt.s 			page 33
+
+
+ 386:radio/radio.c **** {
+ 1279               		.stabn	68,0,387,.LM131-.LFBB12
+ 1280               	.LM131:
+ 1281               	.LFBB12:
+ 1282 04b2 DF93      		push r29
+ 1283 04b4 CF93      		push r28
+ 1284 04b6 00D0      		rcall .
+ 1285 04b8 CDB7      		in r28,__SP_L__
+ 1286 04ba DEB7      		in r29,__SP_H__
+ 1287               	/* prologue: function */
+ 1288               	/* frame size = 2 */
+ 1289               	/* stack size = 4 */
+ 1290               	.L__stack_usage = 4
+ 387:radio/radio.c **** 	uint8_t len = 32;
+ 388:radio/radio.c **** 	uint8_t status;
+ 389:radio/radio.c **** 	uint8_t pipe_number;
+ 390:radio/radio.c **** 	uint8_t doMove = 1;
+ 391:radio/radio.c **** 	RADIO_RX_STATUS result;
+ 392:radio/radio.c **** 
+ 393:radio/radio.c **** 	transmit_lock = 0;
+ 1291               		.stabn	68,0,394,.LM132-.LFBB12
+ 1292               	.LM132:
+ 1293 04bc 1092 0000 		sts transmit_lock,__zero_reg__
+ 394:radio/radio.c **** 
+ 395:radio/radio.c **** 	CE_LOW();
+ 1294               		.stabn	68,0,396,.LM133-.LFBB12
+ 1295               	.LM133:
+ 1296 04c0 9498      		cbi 50-0x20,4
+ 396:radio/radio.c **** 
+ 397:radio/radio.c ****     status = get_status();
+ 1297               		.stabn	68,0,398,.LM134-.LFBB12
+ 1298               	.LM134:
+ 1299 04c2 8983      		std Y+1,r24
+ 1300 04c4 9A83      		std Y+2,r25
+ 1301 04c6 0E94 0000 		call get_status
+ 398:radio/radio.c **** 	pipe_number =  (status & 0xE) >> 1;
+ 1302               		.stabn	68,0,399,.LM135-.LFBB12
+ 1303               	.LM135:
+ 1304 04ca 282F      		mov r18,r24
+ 1305 04cc 30E0      		ldi r19,lo8(0)
+ 1306 04ce 2E70      		andi r18,lo8(14)
+ 1307 04d0 3070      		andi r19,hi8(14)
+ 1308 04d2 3595      		asr r19
+ 1309 04d4 2795      		ror r18
+ 399:radio/radio.c **** 
+ 400:radio/radio.c **** 	if (pipe_number == RADIO_PIPE_EMPTY)
+ 401:radio/radio.c **** 	{
+ 402:radio/radio.c **** 		result = RADIO_RX_FIFO_EMPTY;
+ 403:radio/radio.c **** 		doMove = 0;
+ 404:radio/radio.c **** 	}
+ 405:radio/radio.c **** 
+ 406:radio/radio.c **** 	if (rx_pipe_widths[pipe_number] > len)
+ 1310               		.stabn	68,0,407,.LM136-.LFBB12
+ 1311               	.LM136:
+ 1312 04d6 822F      		mov r24,r18
+ 1313 04d8 F901      		movw r30,r18
+ 1314 04da E050      		subi r30,lo8(-(rx_pipe_widths))
+GAS LISTING /tmp/cc00pSBt.s 			page 34
+
+
+ 1315 04dc F040      		sbci r31,hi8(-(rx_pipe_widths))
+ 1316 04de 2081      		ld r18,Z
+ 1317 04e0 4981      		ldd r20,Y+1
+ 1318 04e2 9A81      		ldd r25,Y+2
+ 1319 04e4 2132      		cpi r18,lo8(33)
+ 1320 04e6 00F4      		brsh .L36
+ 407:radio/radio.c **** 	{
+ 408:radio/radio.c **** 		// the buffer isn't big enough, so don't copy the data.
+ 409:radio/radio.c **** 		result = RADIO_RX_INVALID_ARGS;
+ 410:radio/radio.c **** 		doMove = 0;
+ 411:radio/radio.c **** 	}
+ 412:radio/radio.c **** 
+ 413:radio/radio.c **** 	if (doMove)
+ 1321               		.stabn	68,0,414,.LM137-.LFBB12
+ 1322               	.LM137:
+ 1323 04e8 8730      		cpi r24,lo8(7)
+ 1324 04ea 01F0      		breq .L37
+ 414:radio/radio.c **** 	{
+ 415:radio/radio.c **** 		// Move the data payload into the local
+ 416:radio/radio.c **** 		send_instruction(R_RX_PAYLOAD, (uint8_t*)buffer, (uint8_t*)buffer, rx_pipe_widths[pipe_number]);
+ 1325               		.stabn	68,0,417,.LM138-.LFBB12
+ 1326               	.LM138:
+ 1327 04ec 2081      		ld r18,Z
+ 1328 04ee 81E6      		ldi r24,lo8(97)
+ 1329 04f0 642F      		mov r22,r20
+ 1330 04f2 792F      		mov r23,r25
+ 1331 04f4 592F      		mov r21,r25
+ 1332 04f6 0E94 0000 		call send_instruction
+ 417:radio/radio.c **** 
+ 418:radio/radio.c **** 		status = get_status();
+ 1333               		.stabn	68,0,419,.LM139-.LFBB12
+ 1334               	.LM139:
+ 1335 04fa 0E94 0000 		call get_status
+ 419:radio/radio.c **** 		pipe_number =  (status & 0xE) >> 1;
+ 1336               		.stabn	68,0,420,.LM140-.LFBB12
+ 1337               	.LM140:
+ 1338 04fe 90E0      		ldi r25,lo8(0)
+ 1339 0500 8E70      		andi r24,lo8(14)
+ 1340 0502 9070      		andi r25,hi8(14)
+ 1341 0504 9595      		asr r25
+ 1342 0506 8795      		ror r24
+ 420:radio/radio.c **** 
+ 421:radio/radio.c **** 		if (pipe_number != RADIO_PIPE_EMPTY)
+ 1343               		.stabn	68,0,422,.LM141-.LFBB12
+ 1344               	.LM141:
+ 1345 0508 8730      		cpi r24,lo8(7)
+ 1346 050a 01F0      		breq .L38
+ 422:radio/radio.c **** 			result = RADIO_RX_MORE_PACKETS;
+ 1347               		.stabn	68,0,423,.LM142-.LFBB12
+ 1348               	.LM142:
+ 1349 050c 83E0      		ldi r24,lo8(3)
+ 1350 050e 00C0      		rjmp .L35
+ 1351               	.L36:
+ 410:radio/radio.c **** 		result = RADIO_RX_INVALID_ARGS;
+ 1352               		.stabn	68,0,410,.LM143-.LFBB12
+ 1353               	.LM143:
+ 1354 0510 80E0      		ldi r24,lo8(0)
+GAS LISTING /tmp/cc00pSBt.s 			page 35
+
+
+ 1355 0512 00C0      		rjmp .L35
+ 1356               	.L37:
+ 414:radio/radio.c **** 	if (doMove)
+ 1357               		.stabn	68,0,414,.LM144-.LFBB12
+ 1358               	.LM144:
+ 1359 0514 82E0      		ldi r24,lo8(2)
+ 1360 0516 00C0      		rjmp .L35
+ 1361               	.L38:
+ 423:radio/radio.c **** 		else
+ 424:radio/radio.c **** 			result = RADIO_RX_SUCCESS;
+ 1362               		.stabn	68,0,425,.LM145-.LFBB12
+ 1363               	.LM145:
+ 1364 0518 84E0      		ldi r24,lo8(4)
+ 1365               	.L35:
+ 425:radio/radio.c **** 	}
+ 426:radio/radio.c **** 
+ 427:radio/radio.c **** 	CE_HIGH();
+ 1366               		.stabn	68,0,428,.LM146-.LFBB12
+ 1367               	.LM146:
+ 1368 051a 949A      		sbi 50-0x20,4
+ 428:radio/radio.c **** 
+ 429:radio/radio.c **** 	transmit_lock = 0;
+ 1369               		.stabn	68,0,430,.LM147-.LFBB12
+ 1370               	.LM147:
+ 1371 051c 1092 0000 		sts transmit_lock,__zero_reg__
+ 1372               	/* epilogue start */
+ 430:radio/radio.c **** 
+ 431:radio/radio.c **** 	//release_radio();
+ 432:radio/radio.c **** 
+ 433:radio/radio.c **** 	return result;
+ 434:radio/radio.c **** }
+ 1373               		.stabn	68,0,435,.LM148-.LFBB12
+ 1374               	.LM148:
+ 1375 0520 0F90      		pop __tmp_reg__
+ 1376 0522 0F90      		pop __tmp_reg__
+ 1377 0524 CF91      		pop r28
+ 1378 0526 DF91      		pop r29
+ 1379 0528 0895      		ret
+ 1380               		.size	Radio_Receive, .-Radio_Receive
+ 1381               		.stabs	"result:r(1,8)",64,0,392,24
+ 1382               		.stabn	192,0,0,.LFBB12-.LFBB12
+ 1383               		.stabn	224,0,0,.Lscope12-.LFBB12
+ 1384               	.Lscope12:
+ 1385               		.stabs	"",36,0,0,.Lscope12-.LFBB12
+ 1386               		.stabd	78,0,0
+ 1387               		.stabs	"Radio_Success_Rate:F(7,2)",36,0,438,Radio_Success_Rate
+ 1388               	.global	Radio_Success_Rate
+ 1389               		.type	Radio_Success_Rate, @function
+ 1390               	Radio_Success_Rate:
+ 1391               		.stabd	46,0,0
+ 435:radio/radio.c **** 
+ 436:radio/radio.c **** // This is only accurate if all the failed packets were sent using auto-ack.
+ 437:radio/radio.c **** uint8_t Radio_Success_Rate()
+ 438:radio/radio.c **** {
+ 1392               		.stabn	68,0,439,.LM149-.LFBB13
+ 1393               	.LM149:
+ 1394               	.LFBB13:
+GAS LISTING /tmp/cc00pSBt.s 			page 36
+
+
+ 1395               	/* prologue: function */
+ 1396               	/* frame size = 0 */
+ 1397               	/* stack size = 0 */
+ 1398               	.L__stack_usage = 0
+ 439:radio/radio.c **** 	uint16_t wh = tx_history;
+ 1399               		.stabn	68,0,440,.LM150-.LFBB13
+ 1400               	.LM150:
+ 1401 052a 8091 0000 		lds r24,tx_history
+ 1402 052e 9091 0000 		lds r25,tx_history+1
+ 440:radio/radio.c **** 	uint8_t weight = 0;
+ 1403               		.stabn	68,0,441,.LM151-.LFBB13
+ 1404               	.LM151:
+ 1405 0532 40E0      		ldi r20,lo8(0)
+ 441:radio/radio.c **** 	while (wh != 0)
+ 1406               		.stabn	68,0,442,.LM152-.LFBB13
+ 1407               	.LM152:
+ 1408 0534 00C0      		rjmp .L40
+ 1409               	.L42:
+ 442:radio/radio.c **** 	{
+ 443:radio/radio.c **** 		if ((wh & 1) != 0) weight++;
+ 1410               		.stabn	68,0,444,.LM153-.LFBB13
+ 1411               	.LM153:
+ 1412 0536 80FD      		sbrc r24,0
+ 1413               		.stabn	68,0,444,.LM154-.LFBB13
+ 1414               	.LM154:
+ 1415 0538 4F5F      		subi r20,lo8(-(1))
+ 1416               	.L41:
+ 444:radio/radio.c **** 		wh >>= 1;
+ 1417               		.stabn	68,0,445,.LM155-.LFBB13
+ 1418               	.LM155:
+ 1419 053a 9695      		lsr r25
+ 1420 053c 8795      		ror r24
+ 1421               	.L40:
+ 442:radio/radio.c **** 	{
+ 1422               		.stabn	68,0,442,.LM156-.LFBB13
+ 1423               	.LM156:
+ 1424 053e 0097      		sbiw r24,0
+ 1425 0540 01F4      		brne .L42
+ 445:radio/radio.c **** 	}
+ 446:radio/radio.c **** 	wh = (16 - weight) * 100;
+ 1426               		.stabn	68,0,447,.LM157-.LFBB13
+ 1427               	.LM157:
+ 1428 0542 50E0      		ldi r21,lo8(0)
+ 1429 0544 2CE9      		ldi r18,lo8(-100)
+ 1430 0546 3FEF      		ldi r19,hi8(-100)
+ 1431 0548 429F      		mul r20,r18
+ 1432 054a C001      		movw r24,r0
+ 1433 054c 439F      		mul r20,r19
+ 1434 054e 900D      		add r25,r0
+ 1435 0550 529F      		mul r21,r18
+ 1436 0552 900D      		add r25,r0
+ 1437 0554 1124      		clr r1
+ 1438 0556 805C      		subi r24,lo8(-(1600))
+ 1439 0558 994F      		sbci r25,hi8(-(1600))
+ 447:radio/radio.c **** 	wh /= 16;
+ 1440               		.stabn	68,0,448,.LM158-.LFBB13
+ 1441               	.LM158:
+GAS LISTING /tmp/cc00pSBt.s 			page 37
+
+
+ 1442 055a 54E0      		ldi r21,4
+ 1443 055c 9695      	1:	lsr r25
+ 1444 055e 8795      		ror r24
+ 1445 0560 5A95      		dec r21
+ 1446 0562 01F4      		brne 1b
+ 1447               	/* epilogue start */
+ 448:radio/radio.c **** 	return wh;
+ 449:radio/radio.c **** }
+ 1448               		.stabn	68,0,450,.LM159-.LFBB13
+ 1449               	.LM159:
+ 1450 0564 0895      		ret
+ 1451               		.size	Radio_Success_Rate, .-Radio_Success_Rate
+ 1452               		.stabs	"weight:r(7,2)",64,0,441,20
+ 1453               		.stabn	192,0,0,.LFBB13-.LFBB13
+ 1454               		.stabn	224,0,0,.Lscope13-.LFBB13
+ 1455               	.Lscope13:
+ 1456               		.stabs	"",36,0,0,.Lscope13-.LFBB13
+ 1457               		.stabd	78,0,0
+ 1458               		.stabs	"Radio_Flush:F(0,15)",36,0,452,Radio_Flush
+ 1459               	.global	Radio_Flush
+ 1460               		.type	Radio_Flush, @function
+ 1461               	Radio_Flush:
+ 1462               		.stabd	46,0,0
+ 450:radio/radio.c **** 
+ 451:radio/radio.c **** void Radio_Flush()
+ 452:radio/radio.c **** {
+ 1463               		.stabn	68,0,453,.LM160-.LFBB14
+ 1464               	.LM160:
+ 1465               	.LFBB14:
+ 1466               	/* prologue: function */
+ 1467               	/* frame size = 0 */
+ 1468               	/* stack size = 0 */
+ 1469               	.L__stack_usage = 0
+ 453:radio/radio.c **** 	send_instruction(FLUSH_TX, NULL, NULL, 0);
+ 1470               		.stabn	68,0,454,.LM161-.LFBB14
+ 1471               	.LM161:
+ 1472 0566 81EE      		ldi r24,lo8(-31)
+ 1473 0568 60E0      		ldi r22,lo8(0)
+ 1474 056a 70E0      		ldi r23,hi8(0)
+ 1475 056c 40E0      		ldi r20,lo8(0)
+ 1476 056e 50E0      		ldi r21,hi8(0)
+ 1477 0570 20E0      		ldi r18,lo8(0)
+ 1478 0572 0E94 0000 		call send_instruction
+ 454:radio/radio.c **** 	send_instruction(FLUSH_RX, NULL, NULL, 0);
+ 1479               		.stabn	68,0,455,.LM162-.LFBB14
+ 1480               	.LM162:
+ 1481 0576 82EE      		ldi r24,lo8(-30)
+ 1482 0578 60E0      		ldi r22,lo8(0)
+ 1483 057a 70E0      		ldi r23,hi8(0)
+ 1484 057c 40E0      		ldi r20,lo8(0)
+ 1485 057e 50E0      		ldi r21,hi8(0)
+ 1486 0580 20E0      		ldi r18,lo8(0)
+ 1487 0582 0E94 0000 		call send_instruction
+ 1488               	/* epilogue start */
+ 455:radio/radio.c **** }
+ 1489               		.stabn	68,0,456,.LM163-.LFBB14
+ 1490               	.LM163:
+GAS LISTING /tmp/cc00pSBt.s 			page 38
+
+
+ 1491 0586 0895      		ret
+ 1492               		.size	Radio_Flush, .-Radio_Flush
+ 1493               	.Lscope14:
+ 1494               		.stabs	"",36,0,0,.Lscope14-.LFBB14
+ 1495               		.stabd	78,0,0
+ 1496               		.stabs	"__vector_2:F(0,15)",36,0,459,__vector_2
+ 1497               	.global	__vector_2
+ 1498               		.type	__vector_2, @function
+ 1499               	__vector_2:
+ 1500               		.stabd	46,0,0
+ 456:radio/radio.c **** 
+ 457:radio/radio.c **** // Interrupt handler
+ 458:radio/radio.c **** ISR(INT1_vect)
+ 459:radio/radio.c **** {
+ 1501               		.stabn	68,0,460,.LM164-.LFBB15
+ 1502               	.LM164:
+ 1503               	.LFBB15:
+ 1504 0588 1F92      		push __zero_reg__
+ 1505 058a 0F92      		push r0
+ 1506 058c 0FB6      		in r0,__SREG__
+ 1507 058e 0F92      		push r0
+ 1508 0590 1124      		clr __zero_reg__
+ 1509 0592 2F93      		push r18
+ 1510 0594 3F93      		push r19
+ 1511 0596 4F93      		push r20
+ 1512 0598 5F93      		push r21
+ 1513 059a 6F93      		push r22
+ 1514 059c 7F93      		push r23
+ 1515 059e 8F93      		push r24
+ 1516 05a0 9F93      		push r25
+ 1517 05a2 AF93      		push r26
+ 1518 05a4 BF93      		push r27
+ 1519 05a6 EF93      		push r30
+ 1520 05a8 FF93      		push r31
+ 1521 05aa DF93      		push r29
+ 1522 05ac CF93      		push r28
+ 1523 05ae 0F92      		push __tmp_reg__
+ 1524 05b0 CDB7      		in r28,__SP_L__
+ 1525 05b2 DEB7      		in r29,__SP_H__
+ 1526               	/* prologue: Signal */
+ 1527               	/* frame size = 1 */
+ 1528               	/* stack size = 18 */
+ 1529               	.L__stack_usage = 18
+ 460:radio/radio.c ****     uint8_t status;
+ 461:radio/radio.c ****     uint8_t pipe_number;
+ 462:radio/radio.c **** 
+ 463:radio/radio.c ****     CE_LOW();
+ 1530               		.stabn	68,0,464,.LM165-.LFBB15
+ 1531               	.LM165:
+ 1532 05b4 9498      		cbi 50-0x20,4
+ 464:radio/radio.c **** 
+ 465:radio/radio.c ****     status = get_status();
+ 1533               		.stabn	68,0,466,.LM166-.LFBB15
+ 1534               	.LM166:
+ 1535 05b6 0E94 0000 		call get_status
+ 1536 05ba 8983      		std Y+1,r24
+ 466:radio/radio.c **** 
+GAS LISTING /tmp/cc00pSBt.s 			page 39
+
+
+ 467:radio/radio.c ****     if (status & _BV(RX_DR))
+ 1537               		.stabn	68,0,468,.LM167-.LFBB15
+ 1538               	.LM167:
+ 1539 05bc 90E0      		ldi r25,lo8(0)
+ 1540 05be 86FF      		sbrs r24,6
+ 1541 05c0 00C0      		rjmp .L45
+ 468:radio/radio.c ****     {
+ 469:radio/radio.c ****     	pipe_number =  (status & 0xE) >> 1;
+ 1542               		.stabn	68,0,470,.LM168-.LFBB15
+ 1543               	.LM168:
+ 1544 05c2 8E70      		andi r24,lo8(14)
+ 1545 05c4 9070      		andi r25,hi8(14)
+ 1546 05c6 9595      		asr r25
+ 1547 05c8 8795      		ror r24
+ 470:radio/radio.c ****     	radio_rxhandler(pipe_number);
+ 1548               		.stabn	68,0,471,.LM169-.LFBB15
+ 1549               	.LM169:
+ 1550 05ca 0E94 0000 		call radio_rxhandler
+ 1551               	.L45:
+ 471:radio/radio.c ****     }
+ 472:radio/radio.c ****     // We can get the TX_DS or the MAX_RT interrupt, but not both.
+ 473:radio/radio.c ****     if (status & _BV(TX_DS))
+ 1552               		.stabn	68,0,474,.LM170-.LFBB15
+ 1553               	.LM170:
+ 1554 05ce 8981      		ldd r24,Y+1
+ 1555 05d0 85FF      		sbrs r24,5
+ 1556 05d2 00C0      		rjmp .L46
+ 474:radio/radio.c ****     {
+ 475:radio/radio.c ****         // if there's nothing left to transmit, switch back to receive mode.
+ 476:radio/radio.c ****         transmit_lock = 0;
+ 1557               		.stabn	68,0,477,.LM171-.LFBB15
+ 1558               	.LM171:
+ 1559 05d4 1092 0000 		sts transmit_lock,__zero_reg__
+ 477:radio/radio.c ****         reset_pipe0_address();
+ 1560               		.stabn	68,0,478,.LM172-.LFBB15
+ 1561               	.LM172:
+ 1562 05d8 0E94 0000 		call reset_pipe0_address
+ 478:radio/radio.c ****         set_rx_mode();
+ 1563               		.stabn	68,0,479,.LM173-.LFBB15
+ 1564               	.LM173:
+ 1565 05dc 0E94 0000 		call set_rx_mode
+ 479:radio/radio.c **** 
+ 480:radio/radio.c ****     	// indicate in the history that a packet was transmitted successfully by appending a 1.
+ 481:radio/radio.c ****     	tx_history <<= 1;
+ 1566               		.stabn	68,0,482,.LM174-.LFBB15
+ 1567               	.LM174:
+ 1568 05e0 8091 0000 		lds r24,tx_history
+ 1569 05e4 9091 0000 		lds r25,tx_history+1
+ 1570 05e8 880F      		lsl r24
+ 1571 05ea 991F      		rol r25
+ 1572 05ec 9093 0000 		sts tx_history+1,r25
+ 1573 05f0 8093 0000 		sts tx_history,r24
+ 482:radio/radio.c ****     	tx_history |= 1;
+ 1574               		.stabn	68,0,483,.LM175-.LFBB15
+ 1575               	.LM175:
+ 1576 05f4 8091 0000 		lds r24,tx_history
+ 1577 05f8 9091 0000 		lds r25,tx_history+1
+GAS LISTING /tmp/cc00pSBt.s 			page 40
+
+
+ 1578 05fc 8160      		ori r24,lo8(1)
+ 1579 05fe 9093 0000 		sts tx_history+1,r25
+ 1580 0602 8093 0000 		sts tx_history,r24
+ 483:radio/radio.c **** 
+ 484:radio/radio.c ****     	tx_last_status = RADIO_TX_SUCCESS;
+ 1581               		.stabn	68,0,485,.LM176-.LFBB15
+ 1582               	.LM176:
+ 1583 0606 81E0      		ldi r24,lo8(1)
+ 1584 0608 8093 0000 		sts tx_last_status,r24
+ 1585 060c 00C0      		rjmp .L47
+ 1586               	.L46:
+ 485:radio/radio.c ****     }
+ 486:radio/radio.c ****     else if (status & _BV(MAX_RT))
+ 1587               		.stabn	68,0,487,.LM177-.LFBB15
+ 1588               	.LM177:
+ 1589 060e 84FF      		sbrs r24,4
+ 1590 0610 00C0      		rjmp .L47
+ 487:radio/radio.c ****     {
+ 488:radio/radio.c ****         send_instruction(FLUSH_TX, NULL, NULL, 0);
+ 1591               		.stabn	68,0,489,.LM178-.LFBB15
+ 1592               	.LM178:
+ 1593 0612 81EE      		ldi r24,lo8(-31)
+ 1594 0614 60E0      		ldi r22,lo8(0)
+ 1595 0616 70E0      		ldi r23,hi8(0)
+ 1596 0618 40E0      		ldi r20,lo8(0)
+ 1597 061a 50E0      		ldi r21,hi8(0)
+ 1598 061c 20E0      		ldi r18,lo8(0)
+ 1599 061e 0E94 0000 		call send_instruction
+ 489:radio/radio.c **** 
+ 490:radio/radio.c ****     	transmit_lock = 0;
+ 1600               		.stabn	68,0,491,.LM179-.LFBB15
+ 1601               	.LM179:
+ 1602 0622 1092 0000 		sts transmit_lock,__zero_reg__
+ 491:radio/radio.c ****     	reset_pipe0_address();
+ 1603               		.stabn	68,0,492,.LM180-.LFBB15
+ 1604               	.LM180:
+ 1605 0626 0E94 0000 		call reset_pipe0_address
+ 492:radio/radio.c **** 		set_rx_mode();
+ 1606               		.stabn	68,0,493,.LM181-.LFBB15
+ 1607               	.LM181:
+ 1608 062a 0E94 0000 		call set_rx_mode
+ 493:radio/radio.c ****     	// indicate in the history that a packet was dropped by appending a 0.
+ 494:radio/radio.c ****     	tx_history <<= 1;
+ 1609               		.stabn	68,0,495,.LM182-.LFBB15
+ 1610               	.LM182:
+ 1611 062e 8091 0000 		lds r24,tx_history
+ 1612 0632 9091 0000 		lds r25,tx_history+1
+ 1613 0636 880F      		lsl r24
+ 1614 0638 991F      		rol r25
+ 1615 063a 9093 0000 		sts tx_history+1,r25
+ 1616 063e 8093 0000 		sts tx_history,r24
+ 495:radio/radio.c **** 
+ 496:radio/radio.c ****     	tx_last_status = RADIO_TX_MAX_RT;
+ 1617               		.stabn	68,0,497,.LM183-.LFBB15
+ 1618               	.LM183:
+ 1619 0642 1092 0000 		sts tx_last_status,__zero_reg__
+ 1620               	.L47:
+GAS LISTING /tmp/cc00pSBt.s 			page 41
+
+
+ 497:radio/radio.c ****     }
+ 498:radio/radio.c **** 
+ 499:radio/radio.c ****     // clear the interrupt flags.
+ 500:radio/radio.c **** 	status = _BV(RX_DR) | _BV(TX_DS) | _BV(MAX_RT);
+ 1621               		.stabn	68,0,501,.LM184-.LFBB15
+ 1622               	.LM184:
+ 1623 0646 80E7      		ldi r24,lo8(112)
+ 1624 0648 8983      		std Y+1,r24
+ 501:radio/radio.c **** 	set_register(STATUS, &status, 1);
+ 1625               		.stabn	68,0,502,.LM185-.LFBB15
+ 1626               	.LM185:
+ 1627 064a 87E0      		ldi r24,lo8(7)
+ 1628 064c BE01      		movw r22,r28
+ 1629 064e 6F5F      		subi r22,lo8(-(1))
+ 1630 0650 7F4F      		sbci r23,hi8(-(1))
+ 1631 0652 41E0      		ldi r20,lo8(1)
+ 1632 0654 0E94 0000 		call set_register
+ 502:radio/radio.c **** 
+ 503:radio/radio.c ****     CE_HIGH();
+ 1633               		.stabn	68,0,504,.LM186-.LFBB15
+ 1634               	.LM186:
+ 1635 0658 949A      		sbi 50-0x20,4
+ 1636               	/* epilogue start */
+ 504:radio/radio.c **** }
+ 1637               		.stabn	68,0,505,.LM187-.LFBB15
+ 1638               	.LM187:
+ 1639 065a 0F90      		pop __tmp_reg__
+ 1640 065c CF91      		pop r28
+ 1641 065e DF91      		pop r29
+ 1642 0660 FF91      		pop r31
+ 1643 0662 EF91      		pop r30
+ 1644 0664 BF91      		pop r27
+ 1645 0666 AF91      		pop r26
+ 1646 0668 9F91      		pop r25
+ 1647 066a 8F91      		pop r24
+ 1648 066c 7F91      		pop r23
+ 1649 066e 6F91      		pop r22
+ 1650 0670 5F91      		pop r21
+ 1651 0672 4F91      		pop r20
+ 1652 0674 3F91      		pop r19
+ 1653 0676 2F91      		pop r18
+ 1654 0678 0F90      		pop r0
+ 1655 067a 0FBE      		out __SREG__,r0
+ 1656 067c 0F90      		pop r0
+ 1657 067e 1F90      		pop __zero_reg__
+ 1658 0680 1895      		reti
+ 1659               		.size	__vector_2, .-__vector_2
+ 1660               		.stabs	"status:(7,2)",128,0,461,1
+ 1661               		.stabn	192,0,0,.LFBB15-.LFBB15
+ 1662               		.stabn	224,0,0,.Lscope15-.LFBB15
+ 1663               	.Lscope15:
+ 1664               		.stabs	"",36,0,0,.Lscope15-.LFBB15
+ 1665               		.stabd	78,0,0
+ 1666               		.comm text,128,1
+ 1667               		.lcomm transmit_lock,1
+ 1668               		.data
+ 1669               		.type	tx_history, @object
+GAS LISTING /tmp/cc00pSBt.s 			page 42
+
+
+ 1670               		.size	tx_history, 2
+ 1671               	tx_history:
+ 1672 0026 FF00      		.word	255
+ 1673               		.type	tx_last_status, @object
+ 1674               		.size	tx_last_status, 1
+ 1675               	tx_last_status:
+ 1676 0028 01        		.byte	1
+ 1677               		.type	rx_pipe_widths, @object
+ 1678               		.size	rx_pipe_widths, 6
+ 1679               	rx_pipe_widths:
+ 1680 0029 20        		.byte	32
+ 1681 002a 20        		.byte	32
+ 1682 002b 00        		.byte	0
+ 1683 002c 00        		.byte	0
+ 1684 002d 00        		.byte	0
+ 1685 002e 00        		.byte	0
+ 1686               		.type	rx_pipe0_address, @object
+ 1687               		.size	rx_pipe0_address, 5
+ 1688               	rx_pipe0_address:
+ 1689 002f E7        		.byte	-25
+ 1690 0030 E7        		.byte	-25
+ 1691 0031 E7        		.byte	-25
+ 1692 0032 E7        		.byte	-25
+ 1693 0033 E7        		.byte	-25
+ 1694               		.type	tx_address, @object
+ 1695               		.size	tx_address, 5
+ 1696               	tx_address:
+ 1697 0034 E7        		.byte	-25
+ 1698 0035 E7        		.byte	-25
+ 1699 0036 E7        		.byte	-25
+ 1700 0037 E7        		.byte	-25
+ 1701 0038 E7        		.byte	-25
+ 1702               		.stabs	"transmit_lock:S(0,18)=B(7,2)",40,0,30,transmit_lock
+ 1703               		.stabs	"rx_pipe_widths:S(0,19)=ar(10,4);0;5;(0,18)",38,0,32,rx_pipe_widths
+ 1704               		.stabs	"tx_address:S(0,20)=ar(10,4);0;4;(0,18)",38,0,34,tx_address
+ 1705               		.stabs	"rx_pipe0_address:S(0,20)",38,0,36,rx_pipe0_address
+ 1706               		.stabs	"tx_history:S(0,21)=B(7,4)",38,0,38,tx_history
+ 1707               		.stabs	"tx_last_status:S(0,22)=B(1,10)",38,0,40,tx_last_status
+ 1708               		.stabs	"text:G(0,23)=ar(10,4);0;127;(0,2)",32,0,46,0
+ 1709               		.text
+ 1710               		.stabs	"",100,0,0,.Letext0
+ 1711               	.Letext0:
+GAS LISTING /tmp/cc00pSBt.s 			page 43
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 radio.c
+     /tmp/cc00pSBt.s:2      *ABS*:0000003f __SREG__
+     /tmp/cc00pSBt.s:3      *ABS*:0000003e __SP_H__
+     /tmp/cc00pSBt.s:4      *ABS*:0000003d __SP_L__
+     /tmp/cc00pSBt.s:5      *ABS*:00000000 __tmp_reg__
+     /tmp/cc00pSBt.s:6      *ABS*:00000001 __zero_reg__
+     /tmp/cc00pSBt.s:129    .text:00000000 send_instruction
+     /tmp/cc00pSBt.s:207    .text:00000050 set_register
+                            *COM*:00000080 text
+     /tmp/cc00pSBt.s:311    .text:000000e6 reset_pipe0_address
+     /tmp/cc00pSBt.s:1679   .data:00000029 rx_pipe_widths
+     /tmp/cc00pSBt.s:1688   .data:0000002f rx_pipe0_address
+     /tmp/cc00pSBt.s:342    .text:000000fc get_register.clone.0
+     /tmp/cc00pSBt.s:394    .text:0000012a set_rx_mode
+     /tmp/cc00pSBt.s:498    .text:00000174 get_status
+     /tmp/cc00pSBt.s:532    .text:00000180 Radio_Init
+                             .bss:00000000 transmit_lock
+     /tmp/cc00pSBt.s:793    .text:000002aa Radio_Configure_Rx
+     /tmp/cc00pSBt.s:981    .text:000003a0 Radio_Set_Tx_Addr
+     /tmp/cc00pSBt.s:1696   .data:00000034 tx_address
+     /tmp/cc00pSBt.s:1030   .text:000003cc Radio_Configure
+     /tmp/cc00pSBt.s:1117   .text:00000420 Radio_Transmit
+     /tmp/cc00pSBt.s:1675   .data:00000028 tx_last_status
+     /tmp/cc00pSBt.s:1277   .text:000004b2 Radio_Receive
+     /tmp/cc00pSBt.s:1390   .text:0000052a Radio_Success_Rate
+     /tmp/cc00pSBt.s:1671   .data:00000026 tx_history
+     /tmp/cc00pSBt.s:1461   .text:00000566 Radio_Flush
+     /tmp/cc00pSBt.s:1499   .text:00000588 __vector_2
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss
+SPI_Write_Byte
+SPI_Write_Block
+SPI_ReadWrite_Block
+snprintf
+put_str
+SPI_Init
+radio_rxhandler

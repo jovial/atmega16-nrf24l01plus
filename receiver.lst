@@ -1,0 +1,1021 @@
+GAS LISTING /tmp/ccVYeXrk.s 			page 1
+
+
+   1               		.file	"receiver.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.global __do_copy_data
+   8               		.global __do_clear_bss
+   9               		.stabs	"/home/Stewart/atmel/atmega16_nrf_port/",100,0,2,.Ltext0
+  10               		.stabs	"receiver.c",100,0,2,.Ltext0
+  11               		.text
+  12               	.Ltext0:
+  13               		.stabs	"gcc2_compiled.",60,0,0,0
+  14               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  15               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  16               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  17               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  18               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  19               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  20               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  21               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  22               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  23               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  24               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  25               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"void:t(0,15)=(0,15)",128,0,0,0
+  29               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/inttypes.h",130,0,0,0
+  30               		.stabs	"/usr/lib/gcc/avr/4.5.1/include/stdint.h",130,0,0,0
+  31               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/stdint.h",130,0,0,0
+  32               		.stabs	"int8_t:t(3,1)=(0,10)",128,0,121,0
+  33               		.stabs	"uint8_t:t(3,2)=(0,11)",128,0,122,0
+  34               		.stabs	"int16_t:t(3,3)=(0,1)",128,0,123,0
+  35               		.stabs	"uint16_t:t(3,4)=(0,4)",128,0,124,0
+  36               		.stabs	"int32_t:t(3,5)=(0,3)",128,0,125,0
+  37               		.stabs	"uint32_t:t(3,6)=(0,5)",128,0,126,0
+  38               		.stabs	"int64_t:t(3,7)=(0,6)",128,0,128,0
+  39               		.stabs	"uint64_t:t(3,8)=(0,7)",128,0,129,0
+  40               		.stabs	"intptr_t:t(3,9)=(3,3)",128,0,142,0
+  41               		.stabs	"uintptr_t:t(3,10)=(3,4)",128,0,147,0
+  42               		.stabs	"int_least8_t:t(3,11)=(3,1)",128,0,159,0
+  43               		.stabs	"uint_least8_t:t(3,12)=(3,2)",128,0,164,0
+  44               		.stabs	"int_least16_t:t(3,13)=(3,3)",128,0,169,0
+  45               		.stabs	"uint_least16_t:t(3,14)=(3,4)",128,0,174,0
+  46               		.stabs	"int_least32_t:t(3,15)=(3,5)",128,0,179,0
+  47               		.stabs	"uint_least32_t:t(3,16)=(3,6)",128,0,184,0
+  48               		.stabs	"int_least64_t:t(3,17)=(3,7)",128,0,192,0
+  49               		.stabs	"uint_least64_t:t(3,18)=(3,8)",128,0,199,0
+  50               		.stabs	"int_fast8_t:t(3,19)=(3,1)",128,0,213,0
+  51               		.stabs	"uint_fast8_t:t(3,20)=(3,2)",128,0,218,0
+  52               		.stabs	"int_fast16_t:t(3,21)=(3,3)",128,0,223,0
+  53               		.stabs	"uint_fast16_t:t(3,22)=(3,4)",128,0,228,0
+  54               		.stabs	"int_fast32_t:t(3,23)=(3,5)",128,0,233,0
+  55               		.stabs	"uint_fast32_t:t(3,24)=(3,6)",128,0,238,0
+  56               		.stabs	"int_fast64_t:t(3,25)=(3,7)",128,0,246,0
+  57               		.stabs	"uint_fast64_t:t(3,26)=(3,8)",128,0,253,0
+GAS LISTING /tmp/ccVYeXrk.s 			page 2
+
+
+  58               		.stabs	"intmax_t:t(3,27)=(3,7)",128,0,273,0
+  59               		.stabs	"uintmax_t:t(3,28)=(3,8)",128,0,278,0
+  60               		.stabn	162,0,0,0
+  61               		.stabn	162,0,0,0
+  62               		.stabs	"int_farptr_t:t(1,1)=(3,5)",128,0,77,0
+  63               		.stabs	"uint_farptr_t:t(1,2)=(3,6)",128,0,81,0
+  64               		.stabn	162,0,0,0
+  65               		.stabs	"radio/packet.h",130,0,0,0
+  66               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/avr/io.h",130,0,0,0
+  67               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/avr/fuse.h",130,0,0,0
+  68               		.stabs	"__fuse_t:t(6,1)=(6,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,247,0
+  69               		.stabn	162,0,0,0
+  70               		.stabn	162,0,0,0
+  71               		.stabs	"PACKET_TYPE:t(4,1)=(3,2)",128,0,18,0
+  72               		.stabs	"_msg:T(4,2)=s29messageid:(3,2),0,8;address:(4,3)=ar(4,4)=r(4,4);0;0177777;;0;4;(3,2),8,40;
+  73               		.stabs	"pf_message_t:t(4,6)=(4,2)",128,0,34,0
+  74               		.stabs	"_ack:T(4,7)=s1messageid:(3,2),0,8;;",128,0,0,0
+  75               		.stabs	"pf_ack_t:t(4,8)=(4,7)",128,0,39,0
+  76               		.stabs	"_pf:T(4,9)=u29_filler:(4,10)=ar(4,4);0;28;(3,2),0,232;message:(4,6),0,232;ack:(4,8),0,8;;"
+  77               		.stabs	"payloadformat_t:t(4,11)=(4,9)",128,0,51,0
+  78               		.stabs	"_rp:T(4,12)=s32timestamp:(3,4),0,16;type:(4,1),16,8;payload:(4,11),24,232;;",128,0,0,0
+  79               		.stabs	"radiopacket_t:t(4,13)=(4,12)",128,0,60,0
+  80               		.stabn	162,0,0,0
+  81               		.stabs	"radio/radio.h",130,0,0,0
+  82               		.stabs	"/usr/lib/gcc/avr/4.5.1/include/stddef.h",130,0,0,0
+  83               		.stabs	"ptrdiff_t:t(8,1)=(0,1)",128,0,149,0
+  84               		.stabs	"size_t:t(8,2)=(0,4)",128,0,211,0
+  85               		.stabs	"wchar_t:t(8,3)=(0,1)",128,0,323,0
+  86               		.stabn	162,0,0,0
+  87               		.stabs	"radio/nRF24L01.h",130,0,0,0
+  88               		.stabs	"radio_register_t:t(9,1)=(3,2)",128,0,25,0
+  89               		.stabn	162,0,0,0
+  90               		.stabs	"radio/spi.h",130,0,0,0
+  91               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/stdio.h",130,0,0,0
+  92               		.stabs	"/usr/lib/gcc/avr/4.5.1/include/stdarg.h",130,0,0,0
+  93               		.stabs	"__gnuc_va_list:t(12,1)=(12,2)=*(0,15)",128,0,40,0
+  94               		.stabs	"va_list:t(12,3)=(12,1)",128,0,102,0
+  95               		.stabn	162,0,0,0
+  96               		.stabs	"__file:T(11,1)=s14buf:(11,2)=*(0,2),0,16;unget:(0,11),16,8;flags:(3,2),24,8;size:(0,1),32,
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/stdlib.h",130,0,0,0
+  99               		.stabs	"div_t:t(13,1)=(13,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+ 100               		.stabs	"ldiv_t:t(13,3)=(13,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+ 101               		.stabs	"__compar_fn_t:t(13,5)=(13,6)=*(13,7)=f(0,1)",128,0,80,0
+ 102               		.stabn	162,0,0,0
+ 103               		.stabn	162,0,0,0
+ 104               		.stabs	"_radio_pipe:T(7,1)=@s8;eRADIO_PIPE_0:0,RADIO_PIPE_1:1,RADIO_PIPE_2:2,RADIO_PIPE_3:3,RADIO_
+ 105               		.stabs	"RADIO_PIPE:t(7,2)=(7,1)",128,0,39,0
+ 106               		.stabs	"_radio_tx_power:T(7,3)=@s8;eRADIO_LOWEST_POWER:0,RADIO_LOW_POWER:1,RADIO_HIGH_POWER:2,RADI
+ 107               		.stabs	"RADIO_TX_POWER:t(7,4)=(7,3)",128,0,46,0
+ 108               		.stabs	"_radio_dr:T(7,5)=@s8;eRADIO_1MBPS:0,RADIO_2MBPS:1,;",128,0,0,0
+ 109               		.stabs	"RADIO_DATA_RATE:t(7,6)=(7,5)",128,0,51,0
+ 110               		.stabs	"_radio_receive:T(7,7)=@s8;eRADIO_RX_INVALID_ARGS:0,RADIO_RX_TRANSMITTING:1,RADIO_RX_FIFO_E
+ 111               		.stabs	"RADIO_RX_STATUS:t(7,8)=(7,7)",128,0,59,0
+ 112               		.stabs	"_radio_transmit:T(7,9)=@s8;eRADIO_TX_MAX_RT:0,RADIO_TX_SUCCESS:1,;",128,0,0,0
+ 113               		.stabs	"RADIO_TX_STATUS:t(7,10)=(7,9)",128,0,64,0
+ 114               		.stabs	"_radio_tx_wait:T(7,11)=@s8;eRADIO_WAIT_FOR_TX:0,RADIO_RETURN_ON_TX:1,;",128,0,0,0
+GAS LISTING /tmp/ccVYeXrk.s 			page 3
+
+
+ 115               		.stabs	"RADIO_TX_WAIT:t(7,12)=(7,11)",128,0,69,0
+ 116               		.stabs	"_radio_ack:T(7,13)=@s8;eRADIO_ACK:0,RADIO_NO_ACK:1,;",128,0,0,0
+ 117               		.stabs	"RADIO_USE_ACK:t(7,14)=(7,13)",128,0,74,0
+ 118               		.stabs	"_ed:T(7,15)=@s8;eDISABLE:0,ENABLE:1,;",128,0,0,0
+ 119               		.stabs	"ON_OFF:t(7,16)=(7,15)",128,0,79,0
+ 120               		.stabn	162,0,0,0
+ 121               		.data
+ 122               	.LC0:
+ 123 0000 5354 4154 		.string	"STATION START\n\r"
+ 123      494F 4E20 
+ 123      5354 4152 
+ 123      540A 0D00 
+ 124               		.text
+ 125               		.stabs	"setup:F(0,15)",36,0,19,setup
+ 126               	.global	setup
+ 127               		.type	setup, @function
+ 128               	setup:
+ 129               		.stabd	46,0,0
+   0:receiver.c    **** #define F_CPU 12000000L
+   1:receiver.c    **** 
+   2:receiver.c    **** #include <inttypes.h>
+   3:receiver.c    **** #include "radio/packet.h"
+   4:receiver.c    **** #include "radio/radio.h"
+   5:receiver.c    **** #include <util/delay.h>
+   6:receiver.c    **** #include <avr/io.h>
+   7:receiver.c    **** #include "usart/ad_usart.h"
+   8:receiver.c    **** #include "misc/led.h"
+   9:receiver.c    **** 
+  10:receiver.c    **** char output[128];
+  11:receiver.c    **** volatile uint8_t rxflag = 0;
+  12:receiver.c    **** radiopacket_t packet;
+  13:receiver.c    **** 
+  14:receiver.c    **** 
+  15:receiver.c    **** uint8_t station_addr[5] = { 0xE4, 0xE4, 0xE4, 0xE4, 0xE4 };
+  16:receiver.c    ****  
+  17:receiver.c    **** // setup function is called once at the program's start
+  18:receiver.c    **** void setup()
+  19:receiver.c    **** {
+ 130               		.stabn	68,0,20,.LM0-.LFBB1
+ 131               	.LM0:
+ 132               	.LFBB1:
+ 133 0000 CF93      		push r28
+ 134 0002 DF93      		push r29
+ 135               	/* prologue: function */
+ 136               	/* frame size = 0 */
+ 137               	/* stack size = 2 */
+ 138               	.L__stack_usage = 2
+  20:receiver.c    **** 	// start the serial output module at 100000 bps
+  21:receiver.c    **** 	//Serial.begin(100000);	
+  22:receiver.c    **** 	init_usart(BRATE_576);
+ 139               		.stabn	68,0,23,.LM1-.LFBB1
+ 140               	.LM1:
+ 141 0004 8CE0      		ldi r24,lo8(12)
+ 142 0006 90E0      		ldi r25,hi8(12)
+ 143 0008 0E94 0000 		call init_usart
+  23:receiver.c    **** 
+  24:receiver.c    **** 	// initialize the radio, including the SPI module
+GAS LISTING /tmp/ccVYeXrk.s 			page 4
+
+
+  25:receiver.c    **** 	Radio_Init();
+ 144               		.stabn	68,0,26,.LM2-.LFBB1
+ 145               	.LM2:
+ 146 000c 0E94 0000 		call Radio_Init
+  26:receiver.c    **** 	init_leds();
+ 147               		.stabn	68,0,27,.LM3-.LFBB1
+ 148               	.LM3:
+ 149 0010 0E94 0000 		call init_leds
+  27:receiver.c    **** 	
+  28:receiver.c    **** 
+  29:receiver.c    **** 	//snprintf(output, sizeof(output), "Status(setup): %x \n\r",status);
+  30:receiver.c    **** 	//put_str(output,0);
+  31:receiver.c    ****  
+  32:receiver.c    **** 	// configure the receive settings for radio pipe 0
+  33:receiver.c    **** 	Radio_Configure_Rx(RADIO_PIPE_0, station_addr, ENABLE);
+ 150               		.stabn	68,0,34,.LM4-.LFBB1
+ 151               	.LM4:
+ 152 0014 80E0      		ldi r24,lo8(0)
+ 153 0016 60E0      		ldi r22,lo8(station_addr)
+ 154 0018 70E0      		ldi r23,hi8(station_addr)
+ 155 001a 41E0      		ldi r20,lo8(1)
+ 156 001c 0E94 0000 		call Radio_Configure_Rx
+  34:receiver.c    ****  
+  35:receiver.c    **** 	// configure radio transciever settings.
+  36:receiver.c    **** 	Radio_Configure(RADIO_2MBPS, RADIO_HIGHEST_POWER);
+ 157               		.stabn	68,0,37,.LM5-.LFBB1
+ 158               	.LM5:
+ 159 0020 81E0      		ldi r24,lo8(1)
+ 160 0022 63E0      		ldi r22,lo8(3)
+ 161 0024 0E94 0000 		call Radio_Configure
+  37:receiver.c    ****  
+  38:receiver.c    **** 	// print a message to UART to indicate that the program has started up
+  39:receiver.c    **** 	snprintf(output, sizeof(output), "STATION START\n\r");
+ 162               		.stabn	68,0,40,.LM6-.LFBB1
+ 163               	.LM6:
+ 164 0028 00D0      		rcall .
+ 165 002a 00D0      		rcall .
+ 166 002c 00D0      		rcall .
+ 167 002e EDB7      		in r30,__SP_L__
+ 168 0030 FEB7      		in r31,__SP_H__
+ 169 0032 3196      		adiw r30,1
+ 170 0034 C0E0      		ldi r28,lo8(output)
+ 171 0036 D0E0      		ldi r29,hi8(output)
+ 172 0038 ADB7      		in r26,__SP_L__
+ 173 003a BEB7      		in r27,__SP_H__
+ 174 003c 1296      		adiw r26,1+1
+ 175 003e DC93      		st X,r29
+ 176 0040 CE93      		st -X,r28
+ 177 0042 1197      		sbiw r26,1
+ 178 0044 80E8      		ldi r24,lo8(128)
+ 179 0046 90E0      		ldi r25,hi8(128)
+ 180 0048 9383      		std Z+3,r25
+ 181 004a 8283      		std Z+2,r24
+ 182 004c 80E0      		ldi r24,lo8(.LC0)
+ 183 004e 90E0      		ldi r25,hi8(.LC0)
+ 184 0050 9583      		std Z+5,r25
+ 185 0052 8483      		std Z+4,r24
+GAS LISTING /tmp/ccVYeXrk.s 			page 5
+
+
+ 186 0054 0E94 0000 		call snprintf
+  40:receiver.c    **** 	put_str(output,0);
+ 187               		.stabn	68,0,41,.LM7-.LFBB1
+ 188               	.LM7:
+ 189 0058 8DB7      		in r24,__SP_L__
+ 190 005a 9EB7      		in r25,__SP_H__
+ 191 005c 0696      		adiw r24,6
+ 192 005e 0FB6      		in __tmp_reg__,__SREG__
+ 193 0060 F894      		cli
+ 194 0062 9EBF      		out __SP_H__,r25
+ 195 0064 0FBE      		out __SREG__,__tmp_reg__
+ 196 0066 8DBF      		out __SP_L__,r24
+ 197 0068 CE01      		movw r24,r28
+ 198 006a 60E0      		ldi r22,lo8(0)
+ 199 006c 0E94 0000 		call put_str
+ 200               	/* epilogue start */
+  41:receiver.c    **** }
+ 201               		.stabn	68,0,42,.LM8-.LFBB1
+ 202               	.LM8:
+ 203 0070 DF91      		pop r29
+ 204 0072 CF91      		pop r28
+ 205 0074 0895      		ret
+ 206               		.size	setup, .-setup
+ 207               	.Lscope1:
+ 208               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 209               		.stabd	78,0,0
+ 210               		.data
+ 211               	.LC1:
+ 212 0010 4572 726F 		.string	"Error: wrong packet type (type %d).\n\r"
+ 212      723A 2077 
+ 212      726F 6E67 
+ 212      2070 6163 
+ 212      6B65 7420 
+ 213               	.LC2:
+ 214 0036 4D65 7373 		.string	"Message ID %d from 0x%.2X%.2X%.2X%.2X%.2X: '%s'\n\r"
+ 214      6167 6520 
+ 214      4944 2025 
+ 214      6420 6672 
+ 214      6F6D 2030 
+ 215               	.LC3:
+ 216 0068 436F 756C 		.string	"Could not reply to sender.\n\r"
+ 216      6420 6E6F 
+ 216      7420 7265 
+ 216      706C 7920 
+ 216      746F 2073 
+ 217               	.LC4:
+ 218 0085 5265 706C 		.string	"Replied to sender.\n\r"
+ 218      6965 6420 
+ 218      746F 2073 
+ 218      656E 6465 
+ 218      722E 0A0D 
+ 219               		.text
+ 220               		.stabs	"loop:F(0,15)",36,0,45,loop
+ 221               	.global	loop
+ 222               		.type	loop, @function
+ 223               	loop:
+ 224               		.stabd	46,0,0
+GAS LISTING /tmp/ccVYeXrk.s 			page 6
+
+
+  42:receiver.c    ****  
+  43:receiver.c    **** // loop function is called over and over while the system runs.
+  44:receiver.c    **** void loop()
+  45:receiver.c    **** {
+ 225               		.stabn	68,0,46,.LM9-.LFBB2
+ 226               	.LM9:
+ 227               	.LFBB2:
+ 228 0076 EF92      		push r14
+ 229 0078 FF92      		push r15
+ 230 007a 0F93      		push r16
+ 231 007c 1F93      		push r17
+ 232 007e CF93      		push r28
+ 233 0080 DF93      		push r29
+ 234               	/* prologue: function */
+ 235               	/* frame size = 0 */
+ 236               	/* stack size = 6 */
+ 237               	.L__stack_usage = 6
+  46:receiver.c    **** 	// if a packet hasn't been received, do nothing (see radio_rxhandler below).
+  47:receiver.c    **** 	if (!rxflag) return;
+ 238               		.stabn	68,0,48,.LM10-.LFBB2
+ 239               	.LM10:
+ 240 0082 8091 0000 		lds r24,rxflag
+ 241 0086 8823      		tst r24
+ 242 0088 01F4      		brne .+2
+ 243 008a 00C0      		rjmp .L2
+  48:receiver.c    ****  
+  49:receiver.c    **** 	// if a packet has been received, get it.
+  50:receiver.c    **** 	if (Radio_Receive(&packet) != RADIO_RX_MORE_PACKETS)
+ 244               		.stabn	68,0,51,.LM11-.LFBB2
+ 245               	.LM11:
+ 246 008c 80E0      		ldi r24,lo8(packet)
+ 247 008e 90E0      		ldi r25,hi8(packet)
+ 248 0090 0E94 0000 		call Radio_Receive
+ 249 0094 8330      		cpi r24,lo8(3)
+ 250 0096 01F0      		breq .L4
+  51:receiver.c    **** 	{
+  52:receiver.c    **** 		// if there are no more packets on the radio, clear the receive flag;
+  53:receiver.c    **** 		// otherwise, we want to handle the next packet on the next loop iteration.
+  54:receiver.c    **** 		rxflag = 0;
+ 251               		.stabn	68,0,55,.LM12-.LFBB2
+ 252               	.LM12:
+ 253 0098 1092 0000 		sts rxflag,__zero_reg__
+ 254 009c 86ED      		ldi r24,lo8(1750)
+ 255 009e 96E0      		ldi r25,hi8(1750)
+ 256               	.LBB12:
+ 257               	.LBB13:
+ 258               	.LBB14:
+ 259               	.LBB15:
+ 260               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h",132,0,0,.Ltext1
+ 261               	.Ltext1:
+   0:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** /* Copyright (c) 2002, Marek Michalkiewicz
+   1:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****    Copyright (c) 2007 Joerg Wunsch
+   2:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****    All rights reserved.
+   3:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+   4:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****    Redistribution and use in source and binary forms, with or without
+   5:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****    modification, are permitted provided that the following conditions are met:
+   6:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+GAS LISTING /tmp/ccVYeXrk.s 			page 7
+
+
+   7:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****    * Redistributions of source code must retain the above copyright
+   8:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****      notice, this list of conditions and the following disclaimer.
+   9:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  10:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****    * Redistributions in binary form must reproduce the above copyright
+  11:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****      notice, this list of conditions and the following disclaimer in
+  12:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****      the documentation and/or other materials provided with the
+  13:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****      distribution.
+  14:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  15:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****    * Neither the name of the copyright holders nor the names of
+  16:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****      contributors may be used to endorse or promote products derived
+  17:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****      from this software without specific prior written permission.
+  18:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  19:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  20:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  21:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  22:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  23:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  24:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  25:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  26:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  27:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  28:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  29:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****   POSSIBILITY OF SUCH DAMAGE. */
+  30:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  31:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** /* $Id: delay_basic.h,v 1.1 2007/05/13 21:23:20 joerg_wunsch Exp $ */
+  32:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  33:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** #ifndef _UTIL_DELAY_BASIC_H_
+  34:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** #define _UTIL_DELAY_BASIC_H_ 1
+  35:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  36:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** #include <inttypes.h>
+  37:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  38:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** /** \file */
+  39:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** /** \defgroup util_delay_basic <util/delay_basic.h>: Basic busy-wait delay loops
+  40:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     \code
+  41:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     #include <util/delay_basic.h>
+  42:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     \endcode
+  43:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  44:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     The functions in this header file implement simple delay loops
+  45:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     that perform a busy-waiting.  They are typically used to
+  46:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     facilitate short delays in the program execution.  They are
+  47:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     implemented as count-down loops with a well-known CPU cycle
+  48:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     count per loop iteration.  As such, no other processing can
+  49:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     occur simultaneously.  It should be kept in mind that the
+  50:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     functions described here do not disable interrupts.
+  51:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  52:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     In general, for long delays, the use of hardware timers is
+  53:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     much preferrable, as they free the CPU, and allow for
+  54:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     concurrent processing of other events while the timer is
+  55:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     running.  However, in particular for very short delays, the
+  56:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     overhead of setting up a hardware timer is too much compared
+  57:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     to the overall delay time.
+  58:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  59:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     Two inline functions are provided for the actual delay algorithms.
+  60:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  61:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** */
+  62:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  63:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** #if !defined(__DOXYGEN__)
+GAS LISTING /tmp/ccVYeXrk.s 			page 8
+
+
+  64:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** static inline void _delay_loop_1(uint8_t __count) __attribute__((always_inline));
+  65:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** static inline void _delay_loop_2(uint16_t __count) __attribute__((always_inline));
+  66:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** #endif
+  67:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  68:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** /** \ingroup util_delay_basic
+  69:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  70:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     Delay loop using an 8-bit counter \c __count, so up to 256
+  71:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     iterations are possible.  (The value 256 would have to be passed
+  72:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     as 0.)  The loop executes three CPU cycles per iteration, not
+  73:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     including the overhead the compiler needs to setup the counter
+  74:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     register.
+  75:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  76:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     Thus, at a CPU speed of 1 MHz, delays of up to 768 microseconds
+  77:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     can be achieved.
+  78:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** */
+  79:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** void
+  80:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** _delay_loop_1(uint8_t __count)
+  81:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** {
+  82:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 	__asm__ volatile (
+  83:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 		"1: dec %0" "\n\t"
+  84:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 		"brne 1b"
+  85:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 		: "=r" (__count)
+  86:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 		: "0" (__count)
+  87:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 	);
+  88:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** }
+  89:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  90:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** /** \ingroup util_delay_basic
+  91:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  92:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     Delay loop using a 16-bit counter \c __count, so up to 65536
+  93:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     iterations are possible.  (The value 65536 would have to be
+  94:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     passed as 0.)  The loop executes four CPU cycles per iteration,
+  95:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     not including the overhead the compiler requires to setup the
+  96:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     counter register pair.
+  97:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 
+  98:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     Thus, at a CPU speed of 1 MHz, delays of up to about 262.1
+  99:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****     milliseconds can be achieved.
+ 100:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h ****  */
+ 101:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** void
+ 102:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** _delay_loop_2(uint16_t __count)
+ 103:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** {
+ 104:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h **** 	__asm__ volatile (
+ 262               		.stabn	68,0,105,.LM13-.LFBB2
+ 263               	.LM13:
+ 264 00a0 2CE2      		ldi r18,lo8(300)
+ 265 00a2 31E0      		ldi r19,hi8(300)
+ 266               	.L5:
+ 267 00a4 F901      		movw r30,r18
+ 268               	/* #APP */
+ 269               	 ;  105 "/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay_basic.h" 1
+ 270 00a6 3197      		1: sbiw r30,1
+ 271 00a8 01F4      		brne 1b
+ 272               	 ;  0 "" 2
+ 273               	/* #NOAPP */
+ 274 00aa 0197      		sbiw r24,1
+ 275               	.LBE15:
+ 276               	.LBE14:
+ 277               		.stabs	"/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h",132,0,0,.Ltext2
+GAS LISTING /tmp/ccVYeXrk.s 			page 9
+
+
+ 278               	.Ltext2:
+   0:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** /* Copyright (c) 2002, Marek Michalkiewicz
+   1:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    Copyright (c) 2004,2005,2007 Joerg Wunsch
+   2:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    Copyright (c) 2007  Florin-Viorel Petrov
+   3:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    All rights reserved.
+   4:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+   5:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    Redistribution and use in source and binary forms, with or without
+   6:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    modification, are permitted provided that the following conditions are met:
+   7:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+   8:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    * Redistributions of source code must retain the above copyright
+   9:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer.
+  10:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  11:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    * Redistributions in binary form must reproduce the above copyright
+  12:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer in
+  13:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****      the documentation and/or other materials provided with the
+  14:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****      distribution.
+  15:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  16:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    * Neither the name of the copyright holders nor the names of
+  17:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****      contributors may be used to endorse or promote products derived
+  18:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****      from this software without specific prior written permission.
+  19:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  20:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  21:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  22:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  23:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  24:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  25:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  26:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  27:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  28:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  29:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  30:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****   POSSIBILITY OF SUCH DAMAGE. */
+  31:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  32:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** /* $Id: delay.h,v 1.5.2.1 2009/02/25 10:14:03 joerg_wunsch Exp $ */
+  33:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  34:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** #ifndef _UTIL_DELAY_H_
+  35:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** #define _UTIL_DELAY_H_ 1
+  36:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  37:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** #include <inttypes.h>
+  38:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** #include <util/delay_basic.h>
+  39:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  40:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** /** \file */
+  41:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** /** \defgroup util_delay <util/delay.h>: Convenience functions for busy-wait delay loops
+  42:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     \code
+  43:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     #define F_CPU 1000000UL  // 1 MHz
+  44:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     //#define F_CPU 14.7456E6
+  45:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     #include <util/delay.h>
+  46:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     \endcode
+  47:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  48:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     \note As an alternative method, it is possible to pass the
+  49:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     F_CPU macro down to the compiler from the Makefile.
+  50:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     Obviously, in that case, no \c \#define statement should be
+  51:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     used.
+  52:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  53:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     The functions in this header file are wrappers around the basic
+  54:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     busy-wait functions from <util/delay_basic.h>.  They are meant as
+  55:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     convenience functions where actual time values can be specified
+GAS LISTING /tmp/ccVYeXrk.s 			page 10
+
+
+  56:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     rather than a number of cycles to wait for.  The idea behind is
+  57:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     that compile-time constant expressions will be eliminated by
+  58:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     compiler optimization so floating-point expressions can be used
+  59:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     to calculate the number of delay cycles needed based on the CPU
+  60:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     frequency passed by the macro F_CPU.
+  61:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  62:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     \note In order for these functions to work as intended, compiler
+  63:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     optimizations <em>must</em> be enabled, and the delay time
+  64:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     <em>must</em> be an expression that is a known constant at
+  65:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     compile-time.  If these requirements are not met, the resulting
+  66:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     delay will be much longer (and basically unpredictable), and
+  67:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     applications that otherwise do not use floating-point calculations
+  68:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     will experience severe code bloat by the floating-point library
+  69:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     routines linked into the application.
+  70:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  71:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     The functions available allow the specification of microsecond, and
+  72:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     millisecond delays directly, using the application-supplied macro
+  73:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****     F_CPU as the CPU clock frequency (in Hertz).
+  74:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  75:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** */
+  76:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  77:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** #if !defined(__DOXYGEN__)
+  78:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** static inline void _delay_us(double __us) __attribute__((always_inline));
+  79:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** static inline void _delay_ms(double __ms) __attribute__((always_inline));
+  80:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** #endif
+  81:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  82:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** #ifndef F_CPU
+  83:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** /* prevent compiler error by supplying a default */
+  84:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** # warning "F_CPU not defined for <util/delay.h>"
+  85:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** # define F_CPU 1000000UL
+  86:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** #endif
+  87:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  88:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** #ifndef __OPTIMIZE__
+  89:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+  90:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** #endif
+  91:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  92:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** /**
+  93:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    \ingroup util_delay
+  94:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  95:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    Perform a delay of \c __ms milliseconds, using _delay_loop_2().
+  96:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+  97:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    The macro F_CPU is supposed to be defined to a
+  98:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    constant defining the CPU clock frequency (in Hertz).
+  99:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+ 100:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    The maximal possible delay is 262.14 ms / F_CPU in MHz.
+ 101:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 
+ 102:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    When the user request delay which exceed the maximum possible one,
+ 103:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    _delay_ms() provides a decreased resolution functionality. In this
+ 104:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    mode _delay_ms() will work with a resolution of 1/10 ms, providing
+ 105:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    delays up to 6.5535 seconds (independent from CPU frequency).  The
+ 106:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****    user will not be informed about decreased resolution.
+ 107:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h ****  */
+ 108:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** void
+ 109:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** _delay_ms(double __ms)
+ 110:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** {
+ 111:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 	uint16_t __ticks;
+ 112:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 	double __tmp = ((F_CPU) / 4e3) * __ms;
+GAS LISTING /tmp/ccVYeXrk.s 			page 11
+
+
+ 113:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 	if (__tmp < 1.0)
+ 114:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 		__ticks = 1;
+ 115:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 	else if (__tmp > 65535)
+ 116:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 	{
+ 117:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 		//	__ticks = requested delay in 1/10 ms
+ 118:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 		__ticks = (uint16_t) (__ms * 10.0);
+ 119:/usr/lib/gcc/avr/4.5.1/../../../../avr/include/util/delay.h **** 		while(__ticks)
+ 279               		.stabn	68,0,120,.LM14-.LFBB2
+ 280               	.LM14:
+ 281 00ac 01F4      		brne .L5
+ 282               	.L4:
+ 283               	.LBE13:
+ 284               	.LBE12:
+ 285               		.stabs	"receiver.c",132,0,0,.Ltext3
+ 286               	.Ltext3:
+  55:receiver.c    **** 		//set_led(1,TOGGLE);
+  56:receiver.c    **** 		_delay_ms(175);
+  57:receiver.c    **** 		//set_led(1,TOGGLE);
+  58:receiver.c    **** 	}
+  59:receiver.c    ****  
+  60:receiver.c    **** 	// This station is only expecting to receive MESSAGE packets (see packet.h).
+  61:receiver.c    **** 	if (packet.type != MESSAGE)
+ 287               		.stabn	68,0,62,.LM15-.LFBB2
+ 288               	.LM15:
+ 289 00ae 2091 0000 		lds r18,packet+2
+ 290 00b2 C0E0      		ldi r28,lo8(output)
+ 291 00b4 D0E0      		ldi r29,hi8(output)
+ 292 00b6 2223      		tst r18
+ 293 00b8 01F0      		breq .L6
+  62:receiver.c    **** 	//if (0)
+  63:receiver.c    **** 	{
+  64:receiver.c    **** 		snprintf(output, sizeof(output), "Error: wrong packet type (type %d).\n\r", packet.type);
+ 294               		.stabn	68,0,65,.LM16-.LFBB2
+ 295               	.LM16:
+ 296 00ba 8DB7      		in r24,__SP_L__
+ 297 00bc 9EB7      		in r25,__SP_H__
+ 298 00be 0897      		sbiw r24,8
+ 299 00c0 0FB6      		in __tmp_reg__,__SREG__
+ 300 00c2 F894      		cli
+ 301 00c4 9EBF      		out __SP_H__,r25
+ 302 00c6 0FBE      		out __SREG__,__tmp_reg__
+ 303 00c8 8DBF      		out __SP_L__,r24
+ 304 00ca EDB7      		in r30,__SP_L__
+ 305 00cc FEB7      		in r31,__SP_H__
+ 306 00ce 3196      		adiw r30,1
+ 307 00d0 ADB7      		in r26,__SP_L__
+ 308 00d2 BEB7      		in r27,__SP_H__
+ 309 00d4 1296      		adiw r26,1+1
+ 310 00d6 DC93      		st X,r29
+ 311 00d8 CE93      		st -X,r28
+ 312 00da 1197      		sbiw r26,1
+ 313 00dc 80E8      		ldi r24,lo8(128)
+ 314 00de 90E0      		ldi r25,hi8(128)
+ 315 00e0 9383      		std Z+3,r25
+ 316 00e2 8283      		std Z+2,r24
+ 317 00e4 80E0      		ldi r24,lo8(.LC1)
+ 318 00e6 90E0      		ldi r25,hi8(.LC1)
+GAS LISTING /tmp/ccVYeXrk.s 			page 12
+
+
+ 319 00e8 9583      		std Z+5,r25
+ 320 00ea 8483      		std Z+4,r24
+ 321 00ec 2683      		std Z+6,r18
+ 322 00ee 1782      		std Z+7,__zero_reg__
+ 323 00f0 0E94 0000 		call snprintf
+  65:receiver.c    **** 		put_str(output,1);
+ 324               		.stabn	68,0,66,.LM17-.LFBB2
+ 325               	.LM17:
+ 326 00f4 8DB7      		in r24,__SP_L__
+ 327 00f6 9EB7      		in r25,__SP_H__
+ 328 00f8 0896      		adiw r24,8
+ 329 00fa 0FB6      		in __tmp_reg__,__SREG__
+ 330 00fc F894      		cli
+ 331 00fe 9EBF      		out __SP_H__,r25
+ 332 0100 0FBE      		out __SREG__,__tmp_reg__
+ 333 0102 8DBF      		out __SP_L__,r24
+ 334 0104 CE01      		movw r24,r28
+ 335 0106 61E0      		ldi r22,lo8(1)
+ 336 0108 00C0      		rjmp .L9
+ 337               	.L6:
+  66:receiver.c    **** 		return;
+  67:receiver.c    **** 	}
+  68:receiver.c    ****  
+  69:receiver.c    **** 	// Set the transmit address to the one specified in the received message packet.
+  70:receiver.c    **** 	Radio_Set_Tx_Addr(packet.payload.message.address);
+ 338               		.stabn	68,0,71,.LM18-.LFBB2
+ 339               	.LM18:
+ 340 010a 80E0      		ldi r24,lo8(packet+4)
+ 341 010c 90E0      		ldi r25,hi8(packet+4)
+ 342 010e 0E94 0000 		call Radio_Set_Tx_Addr
+  71:receiver.c    ****  
+  72:receiver.c    **** 	// Print out the message, along with the message ID and sender address.
+  73:receiver.c    **** 	snprintf(output, sizeof(output), "Message ID %d from 0x%.2X%.2X%.2X%.2X%.2X: '%s'\n\r",
+ 343               		.stabn	68,0,74,.LM19-.LFBB2
+ 344               	.LM19:
+ 345 0112 ADB7      		in r26,__SP_L__
+ 346 0114 BEB7      		in r27,__SP_H__
+ 347 0116 5497      		sbiw r26,20
+ 348 0118 0FB6      		in __tmp_reg__,__SREG__
+ 349 011a F894      		cli
+ 350 011c BEBF      		out __SP_H__,r27
+ 351 011e 0FBE      		out __SREG__,__tmp_reg__
+ 352 0120 ADBF      		out __SP_L__,r26
+ 353 0122 EDB7      		in r30,__SP_L__
+ 354 0124 FEB7      		in r31,__SP_H__
+ 355 0126 3196      		adiw r30,1
+ 356 0128 1296      		adiw r26,1+1
+ 357 012a DC93      		st X,r29
+ 358 012c CE93      		st -X,r28
+ 359 012e 1197      		sbiw r26,1
+ 360 0130 00E8      		ldi r16,lo8(128)
+ 361 0132 10E0      		ldi r17,hi8(128)
+ 362 0134 1383      		std Z+3,r17
+ 363 0136 0283      		std Z+2,r16
+ 364 0138 80E0      		ldi r24,lo8(.LC2)
+ 365 013a 90E0      		ldi r25,hi8(.LC2)
+ 366 013c 9583      		std Z+5,r25
+GAS LISTING /tmp/ccVYeXrk.s 			page 13
+
+
+ 367 013e 8483      		std Z+4,r24
+ 368 0140 8091 0000 		lds r24,packet+3
+ 369 0144 8683      		std Z+6,r24
+ 370 0146 1782      		std Z+7,__zero_reg__
+ 371 0148 8091 0000 		lds r24,packet+4
+ 372 014c 8087      		std Z+8,r24
+ 373 014e 1186      		std Z+9,__zero_reg__
+ 374 0150 8091 0000 		lds r24,packet+5
+ 375 0154 8287      		std Z+10,r24
+ 376 0156 1386      		std Z+11,__zero_reg__
+ 377 0158 8091 0000 		lds r24,packet+6
+ 378 015c 8487      		std Z+12,r24
+ 379 015e 1586      		std Z+13,__zero_reg__
+ 380 0160 8091 0000 		lds r24,packet+7
+ 381 0164 8687      		std Z+14,r24
+ 382 0166 1786      		std Z+15,__zero_reg__
+ 383 0168 8091 0000 		lds r24,packet+8
+ 384 016c 808B      		std Z+16,r24
+ 385 016e 118A      		std Z+17,__zero_reg__
+ 386 0170 80E0      		ldi r24,lo8(packet+9)
+ 387 0172 E82E      		mov r14,r24
+ 388 0174 80E0      		ldi r24,hi8(packet+9)
+ 389 0176 F82E      		mov r15,r24
+ 390 0178 F38A      		std Z+19,r15
+ 391 017a E28A      		std Z+18,r14
+ 392 017c 0E94 0000 		call snprintf
+  74:receiver.c    **** 			packet.payload.message.messageid,
+  75:receiver.c    **** 			packet.payload.message.address[0],
+  76:receiver.c    **** 			packet.payload.message.address[1],
+  77:receiver.c    **** 			packet.payload.message.address[2],
+  78:receiver.c    **** 			packet.payload.message.address[3],
+  79:receiver.c    **** 			packet.payload.message.address[4],
+  80:receiver.c    **** 			packet.payload.message.messagecontent);
+  81:receiver.c    **** 	put_str(output,0);
+ 393               		.stabn	68,0,82,.LM20-.LFBB2
+ 394               	.LM20:
+ 395 0180 8DB7      		in r24,__SP_L__
+ 396 0182 9EB7      		in r25,__SP_H__
+ 397 0184 4496      		adiw r24,20
+ 398 0186 0FB6      		in __tmp_reg__,__SREG__
+ 399 0188 F894      		cli
+ 400 018a 9EBF      		out __SP_H__,r25
+ 401 018c 0FBE      		out __SREG__,__tmp_reg__
+ 402 018e 8DBF      		out __SP_L__,r24
+ 403 0190 CE01      		movw r24,r28
+ 404 0192 60E0      		ldi r22,lo8(0)
+ 405 0194 0E94 0000 		call put_str
+  82:receiver.c    **** 
+  83:receiver.c    **** 	//snprintf(output, sizeof(output), "Packet size: %d.\n\r", sizeof(packet));
+  84:receiver.c    **** 	//put_str(output,0);
+  85:receiver.c    ****  
+  86:receiver.c    **** 	// Reply to the sender by sending an ACK packet, reusing the packet data structure.
+  87:receiver.c    **** 	packet.type = ACK;
+ 406               		.stabn	68,0,88,.LM21-.LFBB2
+ 407               	.LM21:
+ 408 0198 81E0      		ldi r24,lo8(1)
+ 409 019a 8093 0000 		sts packet+2,r24
+GAS LISTING /tmp/ccVYeXrk.s 			page 14
+
+
+  88:receiver.c    **** 	//packet.type = 3;
+  89:receiver.c    **** 
+  90:receiver.c    **** 	//snprintf(output, sizeof(output), "ACK: %d , MESSAGE: %d \n\r",ACK,MESSAGE);
+  91:receiver.c    **** 	//put_str(output,0);
+  92:receiver.c    **** 	
+  93:receiver.c    **** 	//snprintf(output, sizeof(output), "timestamp: %x \n\r",packet.timestamp);
+  94:receiver.c    **** 	//put_str(output,0);
+  95:receiver.c    ****  
+  96:receiver.c    **** 	if (Radio_Transmit(&packet, RADIO_WAIT_FOR_TX) == RADIO_TX_MAX_RT)
+ 410               		.stabn	68,0,97,.LM22-.LFBB2
+ 411               	.LM22:
+ 412 019e C701      		movw r24,r14
+ 413 01a0 0997      		sbiw r24,9
+ 414 01a2 60E0      		ldi r22,lo8(0)
+ 415 01a4 0E94 0000 		call Radio_Transmit
+ 416 01a8 8823      		tst r24
+ 417 01aa 01F4      		brne .L7
+  97:receiver.c    **** 	{
+  98:receiver.c    **** 		// If the max retries was reached, the packet was not acknowledged.
+  99:receiver.c    **** 		// This usually occurs if the receiver was not configured correctly or
+ 100:receiver.c    **** 		// if the sender didn't copy its address into the radio packet properly.
+ 101:receiver.c    **** 		snprintf(output, sizeof(output), "Could not reply to sender.\n\r");
+ 418               		.stabn	68,0,102,.LM23-.LFBB2
+ 419               	.LM23:
+ 420 01ac 00D0      		rcall .
+ 421 01ae 00D0      		rcall .
+ 422 01b0 00D0      		rcall .
+ 423 01b2 EDB7      		in r30,__SP_L__
+ 424 01b4 FEB7      		in r31,__SP_H__
+ 425 01b6 3196      		adiw r30,1
+ 426 01b8 ADB7      		in r26,__SP_L__
+ 427 01ba BEB7      		in r27,__SP_H__
+ 428 01bc 1296      		adiw r26,1+1
+ 429 01be DC93      		st X,r29
+ 430 01c0 CE93      		st -X,r28
+ 431 01c2 1197      		sbiw r26,1
+ 432 01c4 1383      		std Z+3,r17
+ 433 01c6 0283      		std Z+2,r16
+ 434 01c8 80E0      		ldi r24,lo8(.LC3)
+ 435 01ca 90E0      		ldi r25,hi8(.LC3)
+ 436 01cc 00C0      		rjmp .L10
+ 437               	.L7:
+ 102:receiver.c    **** 		put_str(output,0);
+ 103:receiver.c    **** 	}
+ 104:receiver.c    **** 	else
+ 105:receiver.c    **** 	{
+ 106:receiver.c    **** 		// the transmission was completed successfully
+ 107:receiver.c    **** 		snprintf(output, sizeof(output), "Replied to sender.\n\r");
+ 438               		.stabn	68,0,108,.LM24-.LFBB2
+ 439               	.LM24:
+ 440 01ce 00D0      		rcall .
+ 441 01d0 00D0      		rcall .
+ 442 01d2 00D0      		rcall .
+ 443 01d4 EDB7      		in r30,__SP_L__
+ 444 01d6 FEB7      		in r31,__SP_H__
+ 445 01d8 3196      		adiw r30,1
+ 446 01da ADB7      		in r26,__SP_L__
+GAS LISTING /tmp/ccVYeXrk.s 			page 15
+
+
+ 447 01dc BEB7      		in r27,__SP_H__
+ 448 01de 1296      		adiw r26,1+1
+ 449 01e0 DC93      		st X,r29
+ 450 01e2 CE93      		st -X,r28
+ 451 01e4 1197      		sbiw r26,1
+ 452 01e6 1383      		std Z+3,r17
+ 453 01e8 0283      		std Z+2,r16
+ 454 01ea 80E0      		ldi r24,lo8(.LC4)
+ 455 01ec 90E0      		ldi r25,hi8(.LC4)
+ 456               	.L10:
+ 457 01ee 9583      		std Z+5,r25
+ 458 01f0 8483      		std Z+4,r24
+ 459 01f2 0E94 0000 		call snprintf
+ 108:receiver.c    **** 		put_str(output,0);
+ 460               		.stabn	68,0,109,.LM25-.LFBB2
+ 461               	.LM25:
+ 462 01f6 8DB7      		in r24,__SP_L__
+ 463 01f8 9EB7      		in r25,__SP_H__
+ 464 01fa 0696      		adiw r24,6
+ 465 01fc 0FB6      		in __tmp_reg__,__SREG__
+ 466 01fe F894      		cli
+ 467 0200 9EBF      		out __SP_H__,r25
+ 468 0202 0FBE      		out __SREG__,__tmp_reg__
+ 469 0204 8DBF      		out __SP_L__,r24
+ 470 0206 CE01      		movw r24,r28
+ 471 0208 60E0      		ldi r22,lo8(0)
+ 472               	.L9:
+ 473 020a 0E94 0000 		call put_str
+ 474               	.L2:
+ 475               	/* epilogue start */
+ 109:receiver.c    **** 			//set_led(0,TOGGLE);
+ 110:receiver.c    **** 			//_delay_ms(100);
+ 111:receiver.c    **** 			//set_led(0,TOGGLE);
+ 112:receiver.c    **** 	}
+ 113:receiver.c    ****  
+ 114:receiver.c    **** 	// the LED should flash for a little over 50 ms.
+ 115:receiver.c    **** 	
+ 116:receiver.c    **** 
+ 117:receiver.c    **** 	//digitalWrite(13, LOW); turn off led
+ 118:receiver.c    **** }
+ 476               		.stabn	68,0,119,.LM26-.LFBB2
+ 477               	.LM26:
+ 478 020e DF91      		pop r29
+ 479 0210 CF91      		pop r28
+ 480 0212 1F91      		pop r17
+ 481 0214 0F91      		pop r16
+ 482 0216 FF90      		pop r15
+ 483 0218 EF90      		pop r14
+ 484 021a 0895      		ret
+ 485               		.size	loop, .-loop
+ 486               	.Lscope2:
+ 487               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 488               		.stabd	78,0,0
+ 489               		.stabs	"radio_rxhandler:F(0,15)",36,0,121,radio_rxhandler
+ 490               		.stabs	"pipe_number:P(3,2)",64,0,121,24
+ 491               	.global	radio_rxhandler
+ 492               		.type	radio_rxhandler, @function
+GAS LISTING /tmp/ccVYeXrk.s 			page 16
+
+
+ 493               	radio_rxhandler:
+ 494               		.stabd	46,0,0
+ 119:receiver.c    ****  
+ 120:receiver.c    **** void radio_rxhandler(uint8_t pipe_number)
+ 121:receiver.c    **** {
+ 495               		.stabn	68,0,122,.LM27-.LFBB3
+ 496               	.LM27:
+ 497               	.LFBB3:
+ 498               	/* prologue: function */
+ 499               	/* frame size = 0 */
+ 500               	/* stack size = 0 */
+ 501               	.L__stack_usage = 0
+ 122:receiver.c    **** 	rxflag = 1;
+ 502               		.stabn	68,0,123,.LM28-.LFBB3
+ 503               	.LM28:
+ 504 021c 81E0      		ldi r24,lo8(1)
+ 505 021e 8093 0000 		sts rxflag,r24
+ 506               	/* epilogue start */
+ 123:receiver.c    **** }
+ 507               		.stabn	68,0,124,.LM29-.LFBB3
+ 508               	.LM29:
+ 509 0222 0895      		ret
+ 510               		.size	radio_rxhandler, .-radio_rxhandler
+ 511               	.Lscope3:
+ 512               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 513               		.stabd	78,0,0
+ 514               		.stabs	"main:F(0,1)",36,0,128,main
+ 515               	.global	main
+ 516               		.type	main, @function
+ 517               	main:
+ 518               		.stabd	46,0,0
+ 124:receiver.c    **** 
+ 125:receiver.c    **** 
+ 126:receiver.c    **** // Arduino's default main function (included here for clarity)
+ 127:receiver.c    **** int main()
+ 128:receiver.c    **** {
+ 519               		.stabn	68,0,129,.LM30-.LFBB4
+ 520               	.LM30:
+ 521               	.LFBB4:
+ 522               	/* prologue: function */
+ 523               	/* frame size = 0 */
+ 524               	/* stack size = 0 */
+ 525               	.L__stack_usage = 0
+ 129:receiver.c    **** 	setup();
+ 526               		.stabn	68,0,130,.LM31-.LFBB4
+ 527               	.LM31:
+ 528 0224 0E94 0000 		call setup
+ 529               	.L13:
+ 130:receiver.c    **** 	for (;;) loop();
+ 530               		.stabn	68,0,131,.LM32-.LFBB4
+ 531               	.LM32:
+ 532 0228 0E94 0000 		call loop
+ 533 022c 00C0      		rjmp .L13
+ 534               		.size	main, .-main
+ 535               	.Lscope4:
+ 536               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 537               		.stabd	78,0,0
+GAS LISTING /tmp/ccVYeXrk.s 			page 17
+
+
+ 538               	.global	rxflag
+ 539               	.global	rxflag
+ 540               		.section .bss
+ 541               		.type	rxflag, @object
+ 542               		.size	rxflag, 1
+ 543               	rxflag:
+ 544 0000 00        		.skip 1,0
+ 545               	.global	station_addr
+ 546               		.data
+ 547               		.type	station_addr, @object
+ 548               		.size	station_addr, 5
+ 549               	station_addr:
+ 550 009a E4        		.byte	-28
+ 551 009b E4        		.byte	-28
+ 552 009c E4        		.byte	-28
+ 553 009d E4        		.byte	-28
+ 554 009e E4        		.byte	-28
+ 555               		.comm output,128,1
+ 556               		.comm packet,32,1
+ 557               		.stabs	"output:G(0,16)=ar(4,4);0;127;(0,2)",32,0,11,0
+ 558               		.stabs	"rxflag:G(0,17)=B(3,2)",32,0,12,0
+ 559               		.stabs	"packet:G(4,13)",32,0,13,0
+ 560               		.stabs	"station_addr:G(4,3)",32,0,16,0
+ 561               		.text
+ 562               		.stabs	"",100,0,0,.Letext0
+ 563               	.Letext0:
+GAS LISTING /tmp/ccVYeXrk.s 			page 18
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 receiver.c
+     /tmp/ccVYeXrk.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccVYeXrk.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccVYeXrk.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccVYeXrk.s:5      *ABS*:00000000 __tmp_reg__
+     /tmp/ccVYeXrk.s:6      *ABS*:00000001 __zero_reg__
+     /tmp/ccVYeXrk.s:128    .text:00000000 setup
+     /tmp/ccVYeXrk.s:549    .data:0000009a station_addr
+                            *COM*:00000080 output
+     /tmp/ccVYeXrk.s:223    .text:00000076 loop
+     /tmp/ccVYeXrk.s:543    .bss:00000000 rxflag
+                            *COM*:00000020 packet
+     /tmp/ccVYeXrk.s:493    .text:0000021c radio_rxhandler
+     /tmp/ccVYeXrk.s:517    .text:00000224 main
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss
+init_usart
+Radio_Init
+init_leds
+Radio_Configure_Rx
+Radio_Configure
+snprintf
+put_str
+Radio_Receive
+Radio_Set_Tx_Addr
+Radio_Transmit
